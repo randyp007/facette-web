@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacybeleid — Facette</title>
+<meta name="description" content="Privacybeleid van Facette — local-first, geen account, geen tracking. Je gegevens blijven op je apparaat.">
+<style>
+  :root{
+    --canvas:#F6F7F9; --surface:#FFFFFF; --sunken:#ECEFF3; --hairline:#DDE2E9;
+    --ink:#14181F; --ink2:#5A6373;
+    --amber:#F5A623; --gold:#FFD27A; --deepgold:#C8821E; --glow:#FFF6E6;
+    --ok:#2FA56A;
+    --serif: ui-serif, "New York", Georgia, "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", Roboto, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--sans);background:var(--canvas);color:var(--ink);
+    line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  h1,h2,h3,.serif{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;color:var(--ink)}
+  a{color:var(--deepgold)}
+  a:hover{color:var(--amber)}
+
+  /* Top bar */
+  .topbar{border-bottom:1px solid var(--hairline);background:var(--surface)}
+  .topbar .wrap{max-width:760px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+  .brandline{display:flex;align-items:center;gap:12px}
+  .funke{width:12px;height:12px;border-radius:50%;background:var(--gold);
+    box-shadow:0 0 18px 4px rgba(255,210,122,.7)}
+  .logoname{font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:.02em}
+  .back{font-size:14px;font-weight:600;text-decoration:none;color:var(--ink2)}
+  .back:hover{color:var(--ink)}
+
+  /* Reading column */
+  .read{max-width:760px;margin:0 auto;padding:56px 24px 24px}
+  .eyebrow{font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin:0}
+  h1{font-size:38px;line-height:1.1;margin:.3em 0 .35em}
+  .meta{font-size:14px;color:var(--ink2);margin:0 0 6px}
+  .transnote{font-size:13.5px;color:var(--ink2);background:var(--sunken);
+    border-radius:12px;padding:12px 16px;margin:18px 0 0}
+
+  h2{font-size:23px;margin:2em 0 .5em;padding-top:.4em;border-top:1px solid var(--hairline)}
+  h2:first-of-type{border-top:none}
+  p{margin:.7em 0;font-size:16.5px}
+  ul{margin:.6em 0;padding-left:1.3em}
+  li{margin:.45em 0;font-size:16.5px}
+  strong{color:var(--ink)}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;
+    background:var(--sunken);padding:1px 6px;border-radius:6px}
+
+  .callout{background:var(--glow);border:1px solid #F3E2BE;border-left:4px solid var(--amber);
+    border-radius:14px;padding:18px 20px;margin:22px 0}
+  .callout p{margin:.35em 0}
+
+  footer{border-top:1px solid var(--hairline);margin-top:48px;background:var(--surface)}
+  footer .wrap{max-width:760px;margin:0 auto;padding:28px 24px;
+    display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;justify-content:space-between;
+    font-size:13.5px;color:var(--ink2)}
+  footer a{color:var(--ink2)}
+  footer a:hover{color:var(--ink)}
+
+  @media(max-width:640px){
+    h1{font-size:30px}
+    .read{padding-top:40px}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brandline">
+      <span class="funke" aria-hidden="true"></span>
+      <span class="logoname">Facette</span>
+    </div>
+    <a class="back" href="index.html">&larr; Terug naar home</a>
+  </div>
+</header>
+
+<main class="read">
+  <p class="eyebrow">Juridisch &amp; Privacy</p>
+  <h1>Privacybeleid</h1>
+  <p class="meta"><strong>Bijgewerkt:</strong> 1 juli 2026 &middot; <strong>Versie:</strong> 1.1</p>
+
+  <p class="transnote"><strong>Opmerking:</strong> Dit is een vertaling van het Duitse origineel, voor uw gemak. Bij twijfel of tegenstrijdigheid prevaleert de <strong>Duitse versie</strong>.</p>
+
+  <h2>1. Verwerkingsverantwoordelijke</h2>
+  <p>De verwerkingsverantwoordelijke in de zin van de Algemene verordening gegevensbescherming (AVG/GDPR) is:</p>
+  <p>
+    Andreas Putzinger<br>
+    Katharina Pieslinger Weg 37, 4030 Linz, Oostenrijk<br>
+    E-mail: <a href="mailto:privacy@facette.life">privacy@facette.life</a>
+  </p>
+  <p>Een functionaris voor gegevensbescherming is wettelijk niet vereist en is niet aangesteld.</p>
+
+  <h2>2. Uitgangspunt: uw gegevens blijven op uw apparaat</h2>
+  <div class="callout">
+    <p>Facette is bewust <strong>&bdquo;local-first&rdquo;</strong> gebouwd. <strong>Alle</strong> gebruiks- en spelgegevens — uw trainingsvoortgang, uw reeks, uw trainingspunten, ontgrendelde spellen, uw optionele voornaam en uw instellingen — worden <strong>uitsluitend lokaal op uw apparaat</strong> opgeslagen (via Apple&rsquo;s <code>UserDefaults</code>). Deze gegevens <strong>verlaten het apparaat niet</strong>.</p>
+  </div>
+  <ul>
+    <li>Er zijn <strong>geen servers</strong> die door de aanbieder worden beheerd. De app brengt uit eigen beweging <strong>geen</strong> <strong>netwerkverbinding</strong> met de aanbieder tot stand.</li>
+    <li>Er is <strong>geen gebruikersaccount</strong> en geen registratie.</li>
+    <li>Er is <strong>geen cloudsynchronisatie</strong>; de gegevens worden <strong>niet</strong> gesynchroniseerd via iCloud of een andere dienst (vanaf deze versie).</li>
+    <li>Er worden <strong>geen</strong> analyse-, tracking-, profilerings- of advertentietechnologieën gebruikt (geen SDK&rsquo;s van derden). Er is <strong>geen geautomatiseerde besluitvorming</strong>. Dienovereenkomstig verschijnt er ook <strong>geen</strong> App Tracking Transparency-dialoogvenster.</li>
+    <li>De aanbieder <strong>verzamelt, bewaart, ontvangt of verzendt geen enkele</strong> persoonsgegevens over u — noch uw naam, noch uw IP-adres, apparaatidentificatoren of gebruiksgegevens.</li>
+  </ul>
+  <p>Omdat er bij de aanbieder in de praktijk geen verwerking van persoonsgegevens plaatsvindt, zijn de klassieke verplichtingen inzake gegevensbescherming (register van verwerkingsactiviteiten, rechten van de betrokkene jegens de aanbieder enz.) grotendeels niet van belang. Wij zetten uw rechten niettemin volledig uiteen (zie paragraaf 7).</p>
+
+  <h2>3. Afzonderlijke verwerkingen</h2>
+  <ul>
+    <li><strong>Voornaam (optioneel):</strong> Wordt uitsluitend gebruikt om u binnen de app persoonlijk te begroeten. De invoer is vrijwillig; de naam blijft uitsluitend lokaal op het apparaat en wordt niet doorgegeven aan de aanbieder of derden.</li>
+    <li><strong>Aankopen (Facette Pro):</strong> In-app-aankopen en abonnementen worden volledig door <strong>Apple</strong> afgehandeld (App Store / StoreKit). De aanbieder ontvangt <strong>geen</strong> betaal-, facturerings- of adresgegevens en geen namen van kopers van Apple. De app controleert enkel de aankoopstatus (entitlement) <strong>lokaal op het apparaat</strong>. <strong>Apple</strong> is verantwoordelijk voor de betalingsafwikkeling (Apple Distribution International Ltd. of de voor u verantwoordelijke Apple-entiteit binnen het kader van de Apple Media Services). Het <strong>privacybeleid van Apple</strong> (apple.com/legal/privacy) is in dit verband van toepassing. De aanbieder heeft geen invloed op deze verwerking.</li>
+    <li><strong>Dagelijkse herinnering (optioneel):</strong> Als u deze inschakelt, wordt de melding <strong>zuiver lokaal op uw apparaat</strong> ingepland (Apple <code>UserNotifications</code>). Er is <strong>geen</strong> pushserver en <strong>geen</strong> doorgifte aan derden.</li>
+    <li><strong>Diagnostiek van het besturingssysteem:</strong> Indien u in de systeeminstellingen van uw apparaat het delen van crash- en diagnostische gegevens met Apple hebt ingeschakeld, kan het besturingssysteem dergelijke gegevens naar Apple sturen. Dit is een functie van Apple, niet van de aanbieder; de aanbieder ontvangt hieruit geen persoonsgegevens.</li>
+  </ul>
+
+  <h2>4. Rechtsgrondslagen (AVG)</h2>
+  <p>Voor zover er binnen de app überhaupt enige verwerking plaatsvindt, dient deze uitsluitend voor het leveren van de door u gevraagde functies (art. 6, lid 1, onder b, AVG) alsmede het gerechtvaardigde belang bij een functionerende, in het bijzonder gegevensminimaliserende app (art. 6, lid 1, onder f, AVG). Aangezien alle gegevens lokaal op uw apparaat blijven, vindt er <strong>geen doorgifte</strong> aan de aanbieder of derden plaats. Er vindt door de aanbieder geen doorgifte aan derde landen plaats.</p>
+
+  <h2>5. Verstrekking aan derden</h2>
+  <p><strong>Geen.</strong> De aanbieder verstrekt geen persoonsgegevens aan derden en verkoopt geen gegevens. Het enige aanrakingspunt met een derde is <strong>Apple</strong> in het kader van de aankoopafwikkeling (zie paragraaf 3), waarop de aanbieder geen invloed heeft en waarvoor Apple zelfstandig verantwoordelijk is.</p>
+
+  <h2>6. Bewaartermijn &amp; verwijdering</h2>
+  <p>De lokaal opgeslagen gegevens blijven op uw apparaat totdat u deze verwijdert of de app deïnstalleert. Bij het <strong>verwijderen van de app</strong> worden alle lokaal opgeslagen Facette-gegevens verwijderd. Verwijdering door de aanbieder is noch mogelijk, noch noodzakelijk, aangezien de aanbieder geen gegevens bewaart.</p>
+
+  <h2>7. Uw rechten</h2>
+  <p>Op grond van de AVG hebt u in beginsel recht op inzage (art. 15), rectificatie (art. 16), wissing (art. 17), beperking van de verwerking (art. 18), overdraagbaarheid van gegevens (art. 20) en bezwaar (art. 21).</p>
+  <p>Aangezien de aanbieder <strong>geen</strong> gegevens over u opslaat of ontvangt, kan hij deze rechten met betrekking tot de lokaal op uw apparaat bewaarde gegevens niet vervullen, en hoeft hij dat ook niet — er zijn bij de aanbieder eenvoudigweg geen gegevens aanwezig. U oefent de controle over uw lokale gegevens <strong>rechtstreeks zelf</strong> uit: inzage rechtstreeks in de app, rectificatie door uw invoer te wijzigen, verwijdering door de app te deïnstalleren.</p>
+  <p>Voor aankopen kunt u contact opnemen met <strong>Apple</strong> (Apple is hiervoor de verantwoordelijke entiteit).</p>
+  <p>Onafhankelijk hiervan hebt u het <strong>recht om een klacht in te dienen bij een toezichthoudende autoriteit voor gegevensbescherming</strong>, in Oostenrijk bij de gegevensbeschermingsautoriteit (Datenschutzbehörde, dsb.gv.at). Bij vragen kunt u ons bereiken op het hierboven vermelde e-mailadres.</p>
+
+  <h2>8. Kinderen en jongeren</h2>
+  <p>Facette richt zich op een algemeen publiek en is ook veilig voor kinderen en jongeren, aangezien de app <strong>geen enkele persoonsgegevens verzamelt of doorgeeft</strong>. Er worden bewust geen gegevens van kinderen verwerkt; bij het ontbreken van enige gegevensverzameling gebeurt dit technisch sowieso niet. Aankopen zijn onderworpen aan de jeugdbeschermings- en Delen-met-gezin-instellingen (Family Sharing) van Apple.</p>
+
+  <h2>9. Wijzigingen van dit beleid</h2>
+  <p>Dit beleid kan worden aangepast indien de app of de juridische situatie verandert. Mocht in de toekomst een functie worden geïntroduceerd waardoor gegevens het apparaat verlaten (bijv. optionele iCloud-synchronisatie), dan wordt dit beleid dienovereenkomstig <strong>vooraf</strong> bijgewerkt. De actuele versie kan in de app worden geraadpleegd onder <em>Instellingen → Juridisch &amp; Privacy</em>.</p>
+
+  <h2>10. Contact</h2>
+  <p>Voor vragen over gegevensbescherming: <a href="mailto:privacy@facette.life">privacy@facette.life</a></p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Facette &middot; Andreas Putzinger, Oostenrijk</span>
+    <span><a href="index.html">Home</a> &middot; <a href="imprint.html">Colofon</a> &middot; <a href="mailto:privacy@facette.life">privacy@facette.life</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

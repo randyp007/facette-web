@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — Facette</title>
+<meta name="description" content="Política de Privacidade da Facette — local-first, sem conta, sem rastreio. Os seus dados ficam no seu dispositivo.">
+<style>
+  :root{
+    --canvas:#F6F7F9; --surface:#FFFFFF; --sunken:#ECEFF3; --hairline:#DDE2E9;
+    --ink:#14181F; --ink2:#5A6373;
+    --amber:#F5A623; --gold:#FFD27A; --deepgold:#C8821E; --glow:#FFF6E6;
+    --ok:#2FA56A;
+    --serif: ui-serif, "New York", Georgia, "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", Roboto, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--sans);background:var(--canvas);color:var(--ink);
+    line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  h1,h2,h3,.serif{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;color:var(--ink)}
+  a{color:var(--deepgold)}
+  a:hover{color:var(--amber)}
+
+  /* Top bar */
+  .topbar{border-bottom:1px solid var(--hairline);background:var(--surface)}
+  .topbar .wrap{max-width:760px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+  .brandline{display:flex;align-items:center;gap:12px}
+  .funke{width:12px;height:12px;border-radius:50%;background:var(--gold);
+    box-shadow:0 0 18px 4px rgba(255,210,122,.7)}
+  .logoname{font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:.02em}
+  .back{font-size:14px;font-weight:600;text-decoration:none;color:var(--ink2)}
+  .back:hover{color:var(--ink)}
+
+  /* Reading column */
+  .read{max-width:760px;margin:0 auto;padding:56px 24px 24px}
+  .eyebrow{font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin:0}
+  h1{font-size:38px;line-height:1.1;margin:.3em 0 .35em}
+  .meta{font-size:14px;color:var(--ink2);margin:0 0 6px}
+  .transnote{font-size:13.5px;color:var(--ink2);background:var(--sunken);
+    border-radius:12px;padding:12px 16px;margin:18px 0 0}
+
+  h2{font-size:23px;margin:2em 0 .5em;padding-top:.4em;border-top:1px solid var(--hairline)}
+  h2:first-of-type{border-top:none}
+  p{margin:.7em 0;font-size:16.5px}
+  ul{margin:.6em 0;padding-left:1.3em}
+  li{margin:.45em 0;font-size:16.5px}
+  strong{color:var(--ink)}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;
+    background:var(--sunken);padding:1px 6px;border-radius:6px}
+
+  .callout{background:var(--glow);border:1px solid #F3E2BE;border-left:4px solid var(--amber);
+    border-radius:14px;padding:18px 20px;margin:22px 0}
+  .callout p{margin:.35em 0}
+
+  footer{border-top:1px solid var(--hairline);margin-top:48px;background:var(--surface)}
+  footer .wrap{max-width:760px;margin:0 auto;padding:28px 24px;
+    display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;justify-content:space-between;
+    font-size:13.5px;color:var(--ink2)}
+  footer a{color:var(--ink2)}
+  footer a:hover{color:var(--ink)}
+
+  @media(max-width:640px){
+    h1{font-size:30px}
+    .read{padding-top:40px}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brandline">
+      <span class="funke" aria-hidden="true"></span>
+      <span class="logoname">Facette</span>
+    </div>
+    <a class="back" href="index.html">&larr; Voltar ao início</a>
+  </div>
+</header>
+
+<main class="read">
+  <p class="eyebrow">Legal e Privacidade</p>
+  <h1>Política de Privacidade</h1>
+  <p class="meta"><strong>Em vigor a partir de:</strong> 1 de julho de 2026 &middot; <strong>Versão:</strong> 1.1</p>
+
+  <p class="transnote"><strong>Nota:</strong> Esta é uma tradução do original alemão, disponibilizada para sua comodidade. Em caso de dúvida ou conflito, a <strong>versão alemã prevalece</strong>.</p>
+
+  <h2>1. Responsável pelo Tratamento</h2>
+  <p>O responsável pelo tratamento, na aceção do Regulamento Geral sobre a Proteção de Dados (RGPD/GDPR), é:</p>
+  <p>
+    Andreas Putzinger<br>
+    Katharina Pieslinger Weg 37, 4030 Linz, Áustria<br>
+    E-mail: <a href="mailto:privacy@facette.life">privacy@facette.life</a>
+  </p>
+  <p>Não é legalmente exigido um encarregado da proteção de dados, não tendo sido designado nenhum.</p>
+
+  <h2>2. Princípio: Os Seus Dados Ficam no Seu Dispositivo</h2>
+  <div class="callout">
+    <p>A Facette foi deliberadamente concebida para ser <strong>"local-first"</strong>. <strong>Todos</strong> os dados de utilização e de jogo — o seu progresso de treino, a sua sequência, os seus pontos de treino, os jogos desbloqueados, o seu primeiro nome opcional e as suas definições — são armazenados <strong>exclusivamente de forma local no seu dispositivo</strong> (através de <code>UserDefaults</code> da Apple). Estes dados <strong>não saem do dispositivo</strong>.</p>
+  </div>
+  <ul>
+    <li>Não existem <strong>quaisquer servidores</strong> operados pelo fornecedor. A aplicação <strong>não</strong> estabelece, por sua própria iniciativa, qualquer <strong>ligação de rede</strong> ao fornecedor.</li>
+    <li>Não existe <strong>qualquer conta de utilizador</strong> nem registo.</li>
+    <li>Não existe <strong>qualquer sincronização na nuvem</strong>; os dados <strong>não</strong> são sincronizados através do iCloud ou de qualquer outro serviço (à data desta versão).</li>
+    <li><strong>Não</strong> são utilizadas tecnologias de análise, rastreio, definição de perfis ou publicidade (sem SDK de terceiros). <strong>Não</strong> há qualquer decisão automatizada. Por conseguinte, também <strong>não</strong> aparece qualquer diálogo de App Tracking Transparency.</li>
+    <li>O fornecedor <strong>não recolhe, armazena, recebe nem transmite quaisquer</strong> dados pessoais sobre si — nem o seu nome, nem o seu endereço IP, identificadores de dispositivo ou dados de utilização.</li>
+  </ul>
+  <p>Uma vez que, na prática, não ocorre qualquer tratamento de dados pessoais junto do fornecedor, as obrigações clássicas de proteção de dados (registo das atividades de tratamento, exercício de direitos dos titulares perante o fornecedor, etc.) não têm, em larga medida, relevância. Ainda assim, expomos os seus direitos na íntegra (ver Secção 7).</p>
+
+  <h2>3. Operações de Tratamento Individuais</h2>
+  <ul>
+    <li><strong>Primeiro nome (opcional):</strong> utilizado apenas para o saudar pessoalmente dentro da aplicação. A sua introdução é voluntária; o nome permanece exclusivamente local no dispositivo e não é transmitido ao fornecedor nem a terceiros.</li>
+    <li><strong>Compras (Facette Pro):</strong> as compras integradas na aplicação e as subscrições são tratadas inteiramente pela <strong>Apple</strong> (App Store / StoreKit). O fornecedor <strong>não</strong> recebe dados de pagamento, de faturação ou de morada, nem nomes de compradores, por parte da Apple. A aplicação limita-se a verificar o estado da compra (entitlement) <strong>localmente no dispositivo</strong>. A <strong>Apple</strong> é responsável pelo processamento de pagamentos (Apple Distribution International Ltd. ou a entidade Apple responsável por si no âmbito dos Apple Media Services). A este respeito, aplica-se a <strong>Política de Privacidade da Apple</strong> (apple.com/legal/privacy). O fornecedor não tem qualquer influência sobre este tratamento.</li>
+    <li><strong>Lembrete diário (opcional):</strong> se o ativar, a notificação é agendada <strong>de forma puramente local no seu dispositivo</strong> (<code>UserNotifications</code> da Apple). <strong>Não</strong> existe qualquer servidor de push nem <strong>qualquer</strong> transmissão a terceiros.</li>
+    <li><strong>Diagnósticos do sistema operativo:</strong> se tiver ativado, nas definições do sistema do seu dispositivo, a partilha de dados de falhas e de diagnóstico com a Apple, o sistema operativo pode enviar esses dados à Apple. Trata-se de uma funcionalidade da Apple, não do fornecedor; o fornecedor não recebe daí quaisquer dados pessoais.</li>
+  </ul>
+
+  <h2>4. Fundamentos Jurídicos (RGPD)</h2>
+  <p>Na medida em que ocorra algum tratamento dentro da aplicação, este serve unicamente para disponibilizar as funções por si solicitadas (art. 6.º, n.º 1, al. b) do RGPD), bem como o interesse legítimo numa aplicação funcional e, sobretudo, minimizadora de dados (art. 6.º, n.º 1, al. f) do RGPD). Uma vez que todos os dados permanecem localmente no seu dispositivo, <strong>não ocorre qualquer transmissão</strong> ao fornecedor ou a terceiros. O fornecedor não realiza qualquer transferência para países terceiros.</p>
+
+  <h2>5. Divulgação a Terceiros</h2>
+  <p><strong>Nenhuma.</strong> O fornecedor não divulga quaisquer dados pessoais a terceiros e não vende quaisquer dados. O único ponto de contacto com um terceiro é a <strong>Apple</strong>, no contexto do processamento das compras (ver Secção 3), sobre o qual o fornecedor não tem influência e pelo qual a Apple é independentemente responsável.</p>
+
+  <h2>6. Prazo de Conservação e Eliminação</h2>
+  <p>Os dados armazenados localmente permanecem no seu dispositivo até que os elimine ou desinstale a aplicação. A <strong>eliminação da aplicação</strong> remove todos os dados da Facette armazenados localmente. A eliminação pelo fornecedor não é possível nem necessária, dado que nenhum dado é conservado pelo fornecedor.</p>
+
+  <h2>7. Os Seus Direitos</h2>
+  <p>Ao abrigo do RGPD, assistem-lhe, em princípio, os direitos de acesso (art. 15.º), de retificação (art. 16.º), de apagamento (art. 17.º), de limitação do tratamento (art. 18.º), de portabilidade dos dados (art. 20.º) e de oposição (art. 21.º).</p>
+  <p>Uma vez que o fornecedor <strong>não</strong> armazena nem recebe quaisquer dados sobre si, não pode dar cumprimento a estes direitos relativamente aos dados que se encontram localmente no seu dispositivo, nem tem de o fazer — simplesmente não existem quaisquer dados conservados pelo fornecedor. O controlo sobre os seus dados locais é exercido <strong>diretamente por si</strong>: consulta diretamente na aplicação, retificação alterando as suas entradas, eliminação desinstalando a aplicação.</p>
+  <p>Quanto às compras, contacte a <strong>Apple</strong> (a Apple é a entidade responsável a este respeito).</p>
+  <p>Independentemente disso, assiste-lhe o <strong>direito de apresentar reclamação junto de uma autoridade de controlo em matéria de proteção de dados</strong>, na Áustria junto da Autoridade de Proteção de Dados (dsb.gv.at). Em caso de dúvidas, pode contactar-nos através do endereço de e-mail indicado acima.</p>
+
+  <h2>8. Crianças e Jovens</h2>
+  <p>A Facette destina-se a um público geral e é também segura para crianças e jovens, uma vez que a aplicação <strong>não recolhe nem transmite quaisquer dados pessoais</strong>. Não são conscientemente tratados quaisquer dados de crianças; na ausência de qualquer recolha de dados, tal não sucede tecnicamente de qualquer modo. As compras estão sujeitas às definições de proteção de menores e de Partilha em Família da Apple.</p>
+
+  <h2>9. Alterações a Esta Política</h2>
+  <p>Esta política pode ser ajustada caso a aplicação ou a situação jurídica se alterem. Caso venha a ser introduzida no futuro uma funcionalidade que faça com que dados saiam do dispositivo (por exemplo, sincronização opcional com o iCloud), esta política será atualizada em conformidade <strong>previamente</strong>. A versão em vigor pode ser consultada na aplicação em <em>Definições → Legal e Privacidade</em>.</p>
+
+  <h2>10. Contacto</h2>
+  <p>Para questões sobre proteção de dados: <a href="mailto:privacy@facette.life">privacy@facette.life</a></p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Facette &middot; Andreas Putzinger, Áustria</span>
+    <span><a href="index.html">Início</a> &middot; <a href="imprint.html">Ficha Técnica</a> &middot; <a href="mailto:privacy@facette.life">privacy@facette.life</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

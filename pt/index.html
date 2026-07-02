@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facette — Treino cerebral honesto de 5 minutos</title>
+<meta name="description" content="A Facette é um treino cerebral honesto e sereno. 5 minutos por dia, 30 jogos curtos em 12 áreas cognitivas, adaptativo. Local-first e privado — sem conta, sem rastreio. Para iPhone, iPad e Mac.">
+<style>
+  :root {
+    --bg: #0b0b0d;
+    --bg-elev: #141418;
+    --bg-elev-2: #1c1c22;
+    --ink: #ecebe6;
+    --ink-dim: #b4b2a8;
+    --ink-faint: #8a887e;
+    --gold: #c9a24b;
+    --gold-soft: #e2c67f;
+    --line: #2a2a30;
+    --focus: #e2c67f;
+    --maxw: 1080px;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--serif);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+  }
+
+  a { color: var(--gold-soft); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Skip link */
+  .skip {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--gold);
+    color: #14100a;
+    padding: 10px 16px;
+    border-radius: 0 0 8px 0;
+    font-weight: 600;
+    z-index: 100;
+  }
+  .skip:focus {
+    left: 0;
+  }
+
+  /* Header / nav */
+  header.site {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(11, 11, 13, 0.82);
+    backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    letter-spacing: 0.04em;
+  }
+  .brand:hover { text-decoration: none; }
+  .brand svg { display: block; }
+  nav.primary ul {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.95rem;
+  }
+  nav.primary a { color: var(--ink-dim); }
+  nav.primary a:hover { color: var(--gold-soft); }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding: 96px 0 72px;
+    text-align: center;
+    background:
+      radial-gradient(1200px 500px at 50% -140px, rgba(201, 162, 75, 0.12), transparent 70%),
+      var(--bg);
+  }
+  .hero .logo-large { margin: 0 auto 28px; width: 96px; height: 96px; }
+  .hero h1 {
+    font-size: clamp(2.6rem, 7vw, 4.4rem);
+    margin: 0 0 8px;
+    letter-spacing: 0.03em;
+  }
+  .hero .claim {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--gold-soft);
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    margin: 0 0 20px;
+  }
+  .hero .sub {
+    max-width: 640px;
+    margin: 0 auto 34px;
+    color: var(--ink-dim);
+    font-size: 1.08rem;
+  }
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* App Store badge (placeholder) */
+  .store-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    background: linear-gradient(180deg, var(--bg-elev-2), var(--bg-elev));
+    color: var(--ink);
+    text-align: left;
+    cursor: default;
+  }
+  .store-badge .apple { color: var(--gold-soft); flex: 0 0 auto; }
+  .store-badge .lines { display: flex; flex-direction: column; line-height: 1.25; }
+  .store-badge .small { font-size: 0.72rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.08em; }
+  .store-badge .big { font-size: 1.05rem; font-weight: 600; }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 22px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    color: var(--ink-dim);
+    font-size: 0.98rem;
+  }
+  .btn-ghost:hover { color: var(--ink); border-color: var(--gold); text-decoration: none; }
+
+  /* Sections */
+  section { padding: 72px 0; border-top: 1px solid var(--line); }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.78rem;
+    color: var(--gold);
+    font-weight: 600;
+    margin: 0 0 14px;
+  }
+  section h2 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin: 0 0 22px;
+  }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--ink-dim);
+    max-width: 720px;
+  }
+
+  /* Feature grid */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+  .card {
+    background: linear-gradient(180deg, var(--bg-elev), var(--bg));
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 26px 24px;
+  }
+  .card .ic {
+    width: 40px; height: 40px;
+    color: var(--gold-soft);
+    margin-bottom: 14px;
+  }
+  .card h3 { font-size: 1.2rem; margin: 0 0 8px; }
+  .card p { margin: 0; color: var(--ink-dim); font-size: 0.98rem; }
+
+  .stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  .stat .num {
+    font-family: var(--serif);
+    font-size: 2.6rem;
+    color: var(--gold-soft);
+    line-height: 1;
+  }
+  .stat .lbl { color: var(--ink-dim); font-size: 0.95rem; margin-top: 6px; }
+
+  /* Honest section */
+  .honest {
+    background:
+      radial-gradient(900px 400px at 80% 0%, rgba(201, 162, 75, 0.07), transparent 70%),
+      var(--bg);
+  }
+  .honest .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+    margin-top: 36px;
+  }
+  .panel {
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 26px;
+    background: var(--bg-elev);
+  }
+  .panel h3 { margin: 0 0 14px; font-size: 1.25rem; }
+  .panel ul { margin: 0; padding-left: 1.1em; color: var(--ink-dim); }
+  .panel li { margin-bottom: 10px; }
+  .panel.yes h3 { color: var(--gold-soft); }
+  .panel.no h3 { color: var(--ink); }
+
+  /* Pricing */
+  .prices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+    margin-top: 36px;
+  }
+  .price {
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px;
+    background: var(--bg-elev);
+    text-align: center;
+  }
+  .price.feature { border-color: var(--gold); background: linear-gradient(180deg, rgba(201,162,75,0.08), var(--bg-elev)); }
+  .price .plan { font-family: var(--serif); font-size: 1.15rem; color: var(--ink); }
+  .price .amount { font-size: 2rem; color: var(--gold-soft); font-family: var(--serif); margin: 8px 0 4px; }
+  .price .note { color: var(--ink-faint); font-size: 0.85rem; }
+  .price .trial { color: var(--gold); font-size: 0.85rem; margin-top: 6px; }
+  .price-fine {
+    margin-top: 22px;
+    color: var(--ink-faint);
+    font-size: 0.9rem;
+    max-width: 720px;
+  }
+
+  /* Privacy */
+  .privacy .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 34px;
+  }
+  .privacy .item h3 { font-size: 1.05rem; margin: 0 0 6px; color: var(--gold-soft); }
+  .privacy .item p { margin: 0; color: var(--ink-dim); font-size: 0.96rem; }
+
+  /* Footer */
+  footer.site {
+    border-top: 1px solid var(--line);
+    background: var(--bg-elev);
+    padding: 56px 0 40px;
+    font-size: 0.94rem;
+    color: var(--ink-dim);
+  }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 40px;
+  }
+  footer.site h3 {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ink-faint);
+    margin: 0 0 14px;
+    font-family: var(--sans);
+    font-weight: 700;
+  }
+  footer.site ul { list-style: none; margin: 0; padding: 0; }
+  footer.site li { margin-bottom: 8px; }
+  footer.site address { font-style: normal; line-height: 1.7; }
+  .foot-brand { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 12px; font-family: var(--serif); font-size: 1.1rem; color: var(--ink); letter-spacing: 0.04em; }
+  .foot-bottom {
+    margin-top: 40px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: space-between;
+    color: var(--ink-faint);
+    font-size: 0.86rem;
+  }
+  .foot-bottom nav a { color: var(--ink-faint); margin-left: 18px; }
+  .foot-bottom nav a:first-child { margin-left: 0; }
+
+  @media (max-width: 780px) {
+    nav.primary { display: none; }
+    .honest .grid { grid-template-columns: 1fr; }
+    .foot-grid { grid-template-columns: 1fr; gap: 30px; }
+    section { padding: 56px 0; }
+    .hero { padding: 72px 0 56px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar para o conteúdo principal</a>
+
+<header class="site">
+  <div class="wrap navbar">
+    <a class="brand" href="#top" aria-label="Facette — início">
+      <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="fg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#e2c67f"/>
+            <stop offset="1" stop-color="#c9a24b"/>
+          </linearGradient>
+        </defs>
+        <g fill="none" stroke="url(#fg)" stroke-width="3" stroke-linejoin="round">
+          <polygon points="50,6 84,26 84,74 50,94 16,74 16,26"/>
+          <polygon points="50,26 67,36 67,64 50,74 33,64 33,36"/>
+          <line x1="50" y1="6" x2="50" y2="26"/>
+          <line x1="84" y1="26" x2="67" y2="36"/>
+          <line x1="84" y1="74" x2="67" y2="64"/>
+          <line x1="50" y1="94" x2="50" y2="74"/>
+          <line x1="16" y1="74" x2="33" y2="64"/>
+          <line x1="16" y1="26" x2="33" y2="36"/>
+        </g>
+      </svg>
+      Facette
+    </a>
+    <nav class="primary" aria-label="Principal">
+      <ul>
+        <li><a href="#what">O que é</a></li>
+        <li><a href="#features">Funcionalidades</a></li>
+        <li><a href="#honest">Honestidade</a></li>
+        <li><a href="#pricing">Preços</a></li>
+        <li><a href="#privacy">Privacidade</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <a id="top"></a>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <svg class="logo-large" viewBox="0 0 100 100" role="img" aria-label="Logótipo Facette: uma gema facetada">
+        <defs>
+          <linearGradient id="fgL" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#e2c67f"/>
+            <stop offset="1" stop-color="#c9a24b"/>
+          </linearGradient>
+        </defs>
+        <g fill="none" stroke="url(#fgL)" stroke-width="2.5" stroke-linejoin="round">
+          <polygon points="50,6 84,26 84,74 50,94 16,74 16,26"/>
+          <polygon points="50,26 67,36 67,64 50,74 33,64 33,36"/>
+          <line x1="50" y1="6" x2="50" y2="26"/>
+          <line x1="84" y1="26" x2="67" y2="36"/>
+          <line x1="84" y1="74" x2="67" y2="64"/>
+          <line x1="50" y1="94" x2="50" y2="74"/>
+          <line x1="16" y1="74" x2="33" y2="64"/>
+          <line x1="16" y1="26" x2="33" y2="36"/>
+        </g>
+      </svg>
+      <h1>Facette</h1>
+      <p class="claim">Treino cerebral honesto de 5 minutos</p>
+      <p class="sub">Prática serena e focada para a sua mente — 30 jogos curtos em 12 áreas cognitivas, adaptados a si. Cinco minutos por dia, no iPhone, iPad e Mac. Sem conta, sem rastreio, tudo fica no seu dispositivo.</p>
+      <div class="cta-row">
+        <span class="store-badge" role="img" aria-label="Brevemente na App Store">
+          <svg class="apple" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">
+            <path d="M16.365 1.43c0 1.14-.42 2.22-1.24 3.03-.99.98-2.05 1.54-3.2 1.45-.14-1.11.42-2.28 1.19-3.02.87-.85 2.32-1.46 3.25-1.46zM20.5 17.02c-.53 1.22-.78 1.76-1.46 2.84-.95 1.51-2.29 3.39-3.95 3.4-1.48.02-1.86-.96-3.87-.95-2.01.01-2.43.97-3.91.95-1.66-.01-2.93-1.71-3.88-3.22C.96 16.02.75 11.06 2.36 8.42c1.14-1.86 2.94-2.95 4.63-2.95 1.72 0 2.8.96 4.22.96 1.38 0 2.22-.96 4.21-.96 1.5 0 3.1.82 4.24 2.24-3.72 2.04-3.12 7.35.84 9.31z"/>
+          </svg>
+          <span class="lines">
+            <span class="small">Brevemente na</span>
+            <span class="big">App Store</span>
+          </span>
+        </span>
+        <a class="btn-ghost" href="#what">Saber mais</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT IT IS -->
+  <section id="what">
+    <div class="wrap">
+      <p class="eyebrow">O que é</p>
+      <h2>Um hábito diário sereno para a sua mente</h2>
+      <p class="lead">A Facette é treino cerebral sem ruído. Cada dia oferece-lhe uma sessão curta e adaptativa — longa o suficiente para importar, curta o suficiente para manter. Os jogos abrangem doze áreas cognitivas, como atenção, memória, raciocínio e velocidade de processamento, e ajustam-se suavemente ao seu nível, para que esteja sempre a trabalhar no limite certo do desafio. Sem tabelas de classificação para perseguir, sem padrões enganadores, sem pressão. Apenas cinco minutos honestos.</p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="wrap">
+      <p class="eyebrow">Destaques</p>
+      <h2>Concebida com cuidado, entregue com serenidade</h2>
+
+      <div class="features">
+        <div class="card">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+          <h3>30 jogos, 12 áreas</h3>
+          <p>Uma biblioteca ampla e variada, abrangendo doze domínios cognitivos, para que a prática se mantenha fresca e equilibrada.</p>
+        </div>
+        <div class="card">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 17l5-6 4 4 4-6 5 7"/><circle cx="8" cy="11" r="1"/><circle cx="16" cy="9" r="1"/></svg>
+          <h3>Dificuldade adaptativa</h3>
+          <p>Cada jogo encontra-o onde está e ajusta-se à medida que evolui — nunca demasiado fácil, nunca esmagador.</p>
+        </div>
+        <div class="card">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3c1.8 3 4 4.5 4 7a4 4 0 1 1-8 0c0-2.5 2.2-4 4-7z"/></svg>
+          <h3>Uma sequência amigável</h3>
+          <p>Uma sequência suave que incentiva a consistência sem culpa. Falhou um dia — a vida acontece — e simplesmente retoma.</p>
+        </div>
+        <div class="card">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg>
+          <h3>Privada e local-first</h3>
+          <p>Sem conta, sem rastreio. O seu progresso e os seus dados pessoais nunca saem do seu dispositivo.</p>
+        </div>
+        <div class="card">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="5" width="14" height="10" rx="1.5"/><path d="M16 8h4l2 3v3h-6"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+          <h3>iPhone · iPad · Mac</h3>
+          <p>Compra Universal — compre uma vez e jogue em todos os seus dispositivos Apple, com o seu hábito sincronizado.</p>
+        </div>
+        <div class="card">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <h3>Cinco minutos honestos</h3>
+          <p>Curto por conceção. Uma sessão diária focada que se enquadra na vida real em vez de a exigir.</p>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat"><div class="num">30</div><div class="lbl">jogos curtos</div></div>
+        <div class="stat"><div class="num">12</div><div class="lbl">áreas cognitivas</div></div>
+        <div class="stat"><div class="num">5</div><div class="lbl">minutos por dia</div></div>
+        <div class="stat"><div class="num">0</div><div class="lbl">rastreadores</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HONEST -->
+  <section id="honest" class="honest">
+    <div class="wrap">
+      <p class="eyebrow">Ciência honesta</p>
+      <h2>O que prometemos — e o que não prometemos</h2>
+      <p class="lead">Acreditamos que as aplicações de treino cerebral devem ser francas quanto à evidência. Praticar uma competência torna-o de forma fiável melhor nessa competência e em tarefas estreitamente relacionadas. Isso é <strong>transferência próxima</strong>, e é real. As afirmações amplas de que o vão tornar mais inteligente na vida quotidiana são <strong>transferência distante</strong>, que a ciência não sustenta. Não vamos fingir o contrário.</p>
+
+      <div class="grid">
+        <div class="panel yes">
+          <h3>O que a Facette faz</h3>
+          <ul>
+            <li>Ajuda-o a tornar-se comprovadamente melhor exatamente nestes exercícios (transferência próxima).</li>
+            <li>Constrói uma prática diária serena e consistente que consegue mesmo manter.</li>
+            <li>Adapta-se ao seu nível para que o treino se mantenha adequadamente desafiante.</li>
+            <li>Respeita a sua atenção, o seu tempo e a sua privacidade.</li>
+          </ul>
+        </div>
+        <div class="panel no">
+          <h3>O que não prometemos</h3>
+          <ul>
+            <li>Nenhuma afirmação sobre aumentar o seu QI.</li>
+            <li>Nenhuma prevenção, tratamento ou cura para a demência ou qualquer outra condição.</li>
+            <li>Nenhuma afirmação médica ou terapêutica — a Facette não é um dispositivo médico.</li>
+            <li>Nenhuma promessa de benefícios amplos de "transferência distante" no mundo real.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="wrap">
+      <p class="eyebrow">Preços</p>
+      <h2>Planos simples, à sua escolha</h2>
+      <p class="lead">Os preços abaixo são informativos. Todas as compras são processadas pela Apple, e o preço apresentado no momento da compra na App Store é o que se aplica. Uma única compra abrange iPhone, iPad e Mac.</p>
+
+      <div class="prices">
+        <div class="price">
+          <div class="plan">Semanal</div>
+          <div class="amount">2,99 €</div>
+          <div class="note">por semana</div>
+        </div>
+        <div class="price">
+          <div class="plan">Mensal</div>
+          <div class="amount">4,99 €</div>
+          <div class="note">por mês</div>
+        </div>
+        <div class="price feature">
+          <div class="plan">Anual</div>
+          <div class="amount">19,99 €</div>
+          <div class="note">por ano</div>
+          <div class="trial">7 dias grátis</div>
+        </div>
+        <div class="price">
+          <div class="plan">Vitalício</div>
+          <div class="amount">29,99 €</div>
+          <div class="note">pagamento único</div>
+        </div>
+      </div>
+
+      <p class="price-fine">Os preços são apresentados e cobrados no momento da compra através da Apple; o preço apresentado pela Apple é o que prevalece e pode variar consoante a região e ao longo do tempo. As subscrições renovam-se automaticamente, salvo cancelamento com pelo menos 24 horas de antecedência relativamente ao fim do período em curso, e podem ser geridas ou canceladas a qualquer momento nas definições da sua conta Apple. A Compra Universal significa que uma única compra se aplica ao seu iPhone, iPad e Mac.</p>
+    </div>
+  </section>
+
+  <!-- PRIVACY -->
+  <section id="privacy" class="privacy">
+    <div class="wrap">
+      <p class="eyebrow">Privacidade</p>
+      <h2>Local-first, por conceção</h2>
+      <p class="lead">A privacidade não é uma funcionalidade que acrescentamos — é a forma como a Facette é construída. Não há conta para criar nem nada onde iniciar sessão. Os seus dados de treino ficam consigo.</p>
+
+      <div class="grid">
+        <div class="item">
+          <h3>Nenhum dado pessoal sai do seu dispositivo</h3>
+          <p>O seu progresso, as suas pontuações e a sua sequência são armazenados localmente nos seus dispositivos Apple.</p>
+        </div>
+        <div class="item">
+          <h3>Sem conta obrigatória</h3>
+          <p>Basta abrir a aplicação e começar. Sem e-mail, sem registo, sem perfil.</p>
+        </div>
+        <div class="item">
+          <h3>Sem rastreio</h3>
+          <p>Sem rastreadores publicitários e sem análise comportamental a segui-lo.</p>
+        </div>
+        <div class="item">
+          <h3>Transparente por defeito</h3>
+          <p>Leia todos os detalhes a qualquer momento na nossa <a href="privacy.html">Política de Privacidade</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="foot-brand">
+          <svg width="24" height="24" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="#c9a24b" stroke-width="3" stroke-linejoin="round">
+              <polygon points="50,6 84,26 84,74 50,94 16,74 16,26"/>
+              <polygon points="50,26 67,36 67,64 50,74 33,64 33,36"/>
+            </g>
+          </svg>
+          Facette
+        </span>
+        <p style="color:var(--ink-faint); max-width:32ch; margin:0 0 8px;">Treino cerebral honesto e sereno. Cinco minutos por dia, inteiramente no seu dispositivo.</p>
+      </div>
+
+      <div>
+        <h3>Fornecedor / Impressum</h3>
+        <address>
+          Andreas Putzinger<br>
+          Katharina Pieslinger Weg 37<br>
+          4030 Linz, Áustria<br>
+          <a href="imprint.html">Ficha Técnica / Aviso Legal &rarr;</a>
+        </address>
+      </div>
+
+      <div>
+        <h3>Contacto e Legal</h3>
+        <ul>
+          <li>Website: <a href="https://facette.life">facette.life</a></li>
+          <li>Comentários: <a href="mailto:feedback@facette.life">feedback@facette.life</a></li>
+          <li>Privacidade: <a href="mailto:privacy@facette.life">privacy@facette.life</a></li>
+          <li><a href="eula.html">EULA (Termos de Utilização)</a></li>
+          <li><a href="privacy.html">Política de Privacidade</a></li>
+          <li><a href="imprint.html">Ficha Técnica / Aviso Legal</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>&copy; 2026 Andreas Putzinger. Todos os direitos reservados.</span>
+      <nav aria-label="Legal">
+        <a href="eula.html">EULA</a>
+        <a href="privacy.html">Privacidade</a>
+        <a href="imprint.html">Ficha Técnica</a>
+        <a href="#top">Voltar ao topo</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

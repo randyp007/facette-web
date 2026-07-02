@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditions d'utilisation et CLUF — Facette</title>
+<style>
+  :root{
+    --canvas:#0C0F14; --surface:#161A22; --raised:#1F2530; --hair:#2A313D;
+    --ink:#ECEFF4; --ink2:#9AA4B2; --ink3:#6B7382;
+    --amber:#F5A623; --gold:#FFD27A;
+    --serif: ui-serif, "New York", Georgia, "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", Roboto, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--sans);background:var(--canvas);color:var(--ink);
+    line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    font-size:16.5px}
+  a{color:var(--gold);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* Header */
+  .topbar{border-bottom:1px solid var(--hair);background:rgba(12,15,20,.85);
+    backdrop-filter:blur(12px);position:sticky;top:0;z-index:10}
+  .topbar .inner{max-width:760px;margin:0 auto;padding:16px 24px;
+    display:flex;align-items:center;gap:14px}
+  .back{font-size:14.5px;font-weight:600;color:var(--ink2)}
+  .back:hover{color:var(--gold);text-decoration:none}
+  .brand{margin-left:auto;font-family:var(--serif);font-size:18px;font-weight:600;
+    letter-spacing:.02em;color:var(--ink)}
+  .brand .funke{display:inline-block;width:8px;height:8px;border-radius:50%;
+    background:var(--gold);box-shadow:0 0 14px 3px rgba(255,210,122,.6);
+    margin-left:3px;vertical-align:middle}
+
+  /* Layout */
+  main{max-width:760px;margin:0 auto;padding:48px 24px 40px}
+  .doc-head{margin-bottom:8px}
+  h1{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;
+    font-size:34px;line-height:1.15;margin:0 0 14px}
+  h1 em{font-style:italic;color:var(--gold)}
+  .meta{color:var(--ink2);font-size:14.5px;margin:0 0 26px}
+  .meta strong{color:var(--ink)}
+
+  h2{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;
+    font-size:23px;line-height:1.25;margin:44px 0 14px;padding-top:8px;
+    color:var(--ink)}
+  h2 .num{color:var(--amber);font-variant-numeric:tabular-nums}
+
+  p{margin:.7em 0}
+  strong{color:var(--ink);font-weight:600}
+  ul{margin:.7em 0;padding-left:1.3em}
+  li{margin:.4em 0}
+
+  .note{border-left:3px solid var(--amber);background:var(--surface);
+    border-radius:0 12px 12px 0;padding:14px 20px;margin:22px 0;
+    color:var(--ink2);font-size:15px}
+  .note strong{color:var(--gold)}
+
+  .rates{background:var(--surface);border:1px solid var(--hair);
+    border-radius:14px;padding:6px 22px;margin:16px 0}
+  .rates ul{list-style:none;padding:0;margin:8px 0}
+  .rates li{padding:9px 0;border-bottom:1px solid var(--hair)}
+  .rates li:last-child{border-bottom:none}
+
+  hr{border:none;border-top:1px solid var(--hair);margin:8px 0}
+
+  footer{border-top:1px solid var(--hair);margin-top:56px;
+    padding:28px 24px 48px;max-width:760px;margin-left:auto;margin-right:auto}
+  footer p{color:var(--ink3);font-size:13.5px;margin:.4em 0;line-height:1.6}
+  footer a{color:var(--ink2)}
+
+  @media (max-width:560px){
+    body{font-size:16px}
+    h1{font-size:28px}
+    h2{font-size:20px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="inner">
+    <a class="back" href="index.html">&larr; Retour à facette.life</a>
+    <span class="brand">Facette<span class="funke"></span></span>
+  </div>
+</div>
+
+<main>
+  <div class="doc-head">
+    <h1>Conditions d'utilisation et contrat de licence utilisateur final <em>(CLUF)</em> — Facette</h1>
+    <p class="meta"><strong>Date :</strong> 2 juillet 2026 &middot; <strong>Version :</strong> 2.1</p>
+  </div>
+
+  <div class="note">
+    <strong>Remarque :</strong> Ceci est une traduction de l'original allemand, fournie pour votre commodité. En cas de doute, de divergence ou de conflit d'interprétation, la version allemande fait foi et prévaut.
+  </div>
+
+  <p>Le présent document régit l'utilisation de l'application « Facette » et vaut <strong>à la fois</strong> conditions d'utilisation <strong>et</strong> contrat de licence utilisateur final (« CLUF ») entre vous, en tant qu'utilisateur final, et le fournisseur. Veuillez le lire attentivement avant d'utiliser l'application.</p>
+
+  <h2><span class="num">1.</span> Fournisseur et identification du fournisseur (mentions légales)</h2>
+  <p>Le fournisseur et seule entité responsable de l'application « Facette » et de son contenu est :</p>
+  <p><strong>Andreas Putzinger</strong><br>
+  Autriche<br>
+  Courriel : <a href="mailto:feedback@facette.life">feedback@facette.life</a></p>
+  <p>Les coordonnées complètes du fournisseur ainsi que l'adresse postale à laquelle il peut être assigné figurent dans les <a href="imprint.html">Mentions légales</a> (conformément à l'art. 5 de la loi autrichienne sur le commerce électronique (ECG) et aux art. 24, 25 de la loi sur les médias (MedienG)). Tout numéro d'identification à la TVA sera ajouté en cas de distribution commerciale.</p>
+
+  <h2><span class="num">2.</span> Champ d'application et relation contractuelle</h2>
+  <p>2.1 Les présentes conditions s'appliquent à l'utilisation de l'application « Facette » sur iPhone, iPad et Mac.</p>
+  <p>2.2 <strong>Ce contrat est conclu exclusivement entre vous et le fournisseur — et non avec Apple.</strong> Apple Inc. ou la filiale Apple respectivement responsable (ensemble « Apple ») n'est pas partie à ce contrat. Le fournisseur seul — et non Apple — est responsable de l'application et de son contenu.</p>
+  <p>2.3 En complément, les <strong>Règles d'utilisation Apple</strong> issues des conditions Apple Media Services / App Store respectivement en vigueur s'appliquent, de même que, dans la mesure où le fournisseur ne les remplace pas par le présent CLUF, le contrat de licence utilisateur final standard d'Apple pour les applications sous licence (disponible à l'adresse <a href="https://www.apple.com/legal/internet-services/itunes/">https://www.apple.com/legal/internet-services/itunes/</a>). En cas de conflit, les dispositions impératives d'Apple ainsi que le droit impératif de la consommation priment sur les présentes conditions.</p>
+  <p>2.4 Est un consommateur au sens des présentes conditions toute personne physique qui utilise l'application à des fins qui ne peuvent être rattachées de manière prépondérante ni à son activité commerciale ni à son activité professionnelle indépendante.</p>
+
+  <h2><span class="num">3.</span> Description des prestations</h2>
+  <p>3.1 Facette est une application destinée à un <strong>entraînement cérébral honnête</strong>, quotidien et ludique. Elle propose une offre de base gratuite ainsi que des fonctionnalités payantes optionnelles « Facette Pro » (voir la section 8).</p>
+  <p>3.2 <strong>Local d'abord :</strong> Facette est conçu de sorte qu'<strong>aucune donnée personnelle ne quitte l'appareil</strong>. Il n'y a <strong>pas de compte utilisateur</strong>, <strong>pas de pistage</strong>, <strong>pas d'identifiants publicitaires</strong> et <strong>pas de serveurs appartenant au fournisseur</strong>. La progression de jeu et les réglages restent localement sur votre appareil ou — dans la mesure où vous l'activez dans les réglages système — dans votre iCloud personnel. Les détails sont régis par la Politique de confidentialité.</p>
+  <p>3.3 L'application est fournie <strong>sous la forme respectivement proposée</strong> (« en l'état », dans la mesure où la loi le permet). Il n'existe aucun droit à des fonctions, contenus ou développements ultérieurs particuliers. Le fournisseur peut à tout moment modifier, ajouter, mettre à jour ou supprimer des contenus, des jeux et des fonctionnalités, et peut modifier ou restreindre la disponibilité de l'application ou de fonctionnalités individuelles sur des plateformes individuelles (iPhone, iPad, Mac) ou dans des régions, dans la mesure où la loi le permet (voir la section 16).</p>
+
+  <h2><span class="num">4.</span> Octroi de la licence (CLUF)</h2>
+  <p>4.1 Le fournisseur vous accorde un droit d'utilisation <strong>non exclusif, personnel, non transférable et ne pouvant faire l'objet d'une sous-licence</strong>, portant sur l'utilisation de l'application sur les appareils Apple reliés à votre identifiant Apple ou en votre possession ou sous votre contrôle, exclusivement à des fins privées et non commerciales et dans les limites des <strong>Règles d'utilisation Apple</strong> des conditions générales Apple Media Services.</p>
+  <p>4.2 La licence comprend l'utilisation sur toutes les plateformes prises en charge dans le cadre de l'<strong>achat universel</strong> (iPhone, iPad et Mac). Dans la mesure où le produit concerné est proposé comme partageable via le partage familial Apple, les Règles d'utilisation Apple s'y appliquent.</p>
+  <p>4.3 La licence est liée à la présente relation contractuelle et prend automatiquement fin lorsque vous n'êtes plus autorisé à utiliser l'application de manière licite.</p>
+
+  <h2><span class="num">5.</span> Utilisation autorisée et interdite</h2>
+  <p>5.1 L'utilisation privée conforme à sa destination de l'application dans le cadre des présentes conditions et des Règles d'utilisation Apple est <strong>autorisée</strong>.</p>
+  <p>5.2 Sont en particulier <strong>interdits</strong>, dans la mesure où la loi ne les autorise pas impérativement :</p>
+  <ul>
+    <li>reproduire, louer, prêter, vendre, transmettre, distribuer l'application ou la rendre accessible au public ;</li>
+    <li>modifier, remanier, décompiler, désassembler l'application ou procéder par tout autre moyen à son ingénierie inverse ;</li>
+    <li>contourner les mécanismes de protection, de sécurité ou de licence ;</li>
+    <li>intégrer l'application ou des parties de celle-ci dans d'autres produits ou créer des œuvres dérivées.</li>
+  </ul>
+  <p>5.3 Les actes autorisés de manière impérative par la loi restent <strong>inchangés</strong>, en particulier ceux visant à établir l'interopérabilité ainsi qu'à corriger des erreurs dans la mesure où la loi le permet (cf. art. 40d et suivants de la loi autrichienne sur le droit d'auteur (UrhG)).</p>
+
+  <h2><span class="num">6.</span> Propriété et propriété intellectuelle</h2>
+  <p>6.1 L'application, son code source et son code objet, sa conception, ses textes, graphismes, logos, le nom « Facette », ainsi que tous les autres contenus sont protégés par le droit d'auteur et les droits voisins et demeurent la propriété du fournisseur ou de ses concédants.</p>
+  <p>6.2 Par le présent contrat, seuls les droits d'utilisation précisés à la section 4 vous sont accordés. Tous les droits non expressément accordés demeurent acquis au fournisseur.</p>
+
+  <h2><span class="num">7.</span> Dispositions spécifiques à Apple (conditions minimales impératives)</h2>
+  <p>Les dispositions suivantes s'appliquent à titre complémentaire et priment sur les dispositions contraires du présent contrat. Elles mettent en œuvre les conditions minimales exigées par Apple pour un CLUF propre au fournisseur :</p>
+  <p>7.1 <strong>Parties contractantes.</strong> Ce CLUF est conclu exclusivement entre vous et le fournisseur, et non avec Apple. Le fournisseur — et non Apple — est seul responsable de l'application et de son contenu.</p>
+  <p>7.2 <strong>Maintenance et assistance.</strong> La responsabilité des services de maintenance et d'assistance relatifs à l'application incombe au seul fournisseur. Apple n'a aucune obligation, de quelque nature que ce soit, de fournir des services de maintenance ou d'assistance concernant l'application.</p>
+  <p>7.3 <strong>Garantie.</strong> Dans la mesure où la loi le permet, Apple ne fournit aucune garantie, de quelque nature que ce soit, pour l'application. Si l'application venait à ne pas être conforme à une exigence de garantie applicable, vous pouvez en informer Apple ; dans un tel cas, Apple vous remboursera, le cas échéant, le prix d'achat que vous avez payé. Dans toute la mesure permise par la loi, Apple n'a aucune autre obligation de garantie, de quelque nature que ce soit ; toutes autres réclamations, pertes, responsabilités, dommages, frais ou dépenses imputables à un défaut de conformité à une exigence de garantie relèvent de la seule responsabilité du fournisseur.</p>
+  <p>7.4 <strong>Réclamations relatives à l'application.</strong> Le fournisseur — et non Apple — est responsable du traitement de toute réclamation que vous ou des tiers font valoir en lien avec l'application ou sa possession et/ou son utilisation, en particulier : (a) les réclamations au titre de la responsabilité du fait des produits ; (b) les réclamations résultant d'un défaut de conformité aux exigences légales ou réglementaires applicables ; et (c) les réclamations relevant de la législation sur la protection des consommateurs, la protection des données ou d'une législation similaire. Les droits légaux impératifs demeurent inchangés.</p>
+  <p>7.5 <strong>Droits de tiers (propriété intellectuelle).</strong> Dans le cas où un tiers alléguerait que l'application ou votre possession et utilisation de l'application porte atteinte à ses droits de propriété intellectuelle, le fournisseur seul — et non Apple — est responsable de l'examen, de la défense, du règlement et de l'exécution de toute réclamation de ce type.</p>
+  <p>7.6 <strong>Déclarations légales de l'utilisateur final.</strong> Vous déclarez et garantissez que (a) vous ne vous trouvez pas dans un pays faisant l'objet d'un embargo du gouvernement des États-Unis ou désigné par le gouvernement des États-Unis comme pays « soutenant le terrorisme », et (b) vous ne figurez sur aucune liste du gouvernement des États-Unis recensant des parties interdites ou soumises à restriction.</p>
+  <p>7.7 <strong>Conditions de tiers.</strong> Vous devez respecter toutes les conditions de tiers applicables lorsque vous utilisez l'application (par exemple, les conditions de votre forfait mobile ou de données).</p>
+  <p>7.8 <strong>Apple en tant que tiers bénéficiaire.</strong> Apple et les filiales d'Apple sont des <strong>tiers bénéficiaires</strong> du présent CLUF. Dès votre acceptation du présent CLUF, Apple a le droit (et sera réputée avoir accepté ce droit) de faire valoir le présent CLUF à votre encontre en tant que tiers bénéficiaire.</p>
+
+  <h2><span class="num">8.</span> Facette Pro — Achats, facturation et remboursements (exclusivement via Apple)</h2>
+  <p>8.1 <strong>Traitement exclusivement via Apple.</strong> Tous les achats, abonnements, leur renouvellement, leur gestion, leur résiliation et leur remboursement sont traités <strong>exclusivement via Apple</strong> et votre compte identifiant Apple (StoreKit / App Store). Le partenaire contractuel pour le traitement des paiements est Apple. Le fournisseur ne peut ni encaisser lui-même de paiements ni procéder lui-même à des remboursements et n'a aucun accès à vos données de paiement.</p>
+  <p>8.2 <strong>Prix faisant foi.</strong> L'objet du contrat est toujours le <strong>prix respectivement affiché dans la boîte de dialogue d'achat de l'App Store</strong> dans votre région et votre devise. Les tarifs ci-dessous sont fournis <strong>à titre purement indicatif</strong> et reflètent l'état au mois de <strong>juillet 2026</strong> ; ils sont <strong>susceptibles de modification</strong>. Seul l'affichage dans la boîte de dialogue d'achat Apple au moment de l'achat fait foi :</p>
+  <div class="rates">
+    <ul>
+      <li><strong>Semaine :</strong> 2,99 € (abonnement à renouvellement automatique)</li>
+      <li><strong>Mois :</strong> 4,99 € (abonnement à renouvellement automatique)</li>
+      <li><strong>Année :</strong> 19,99 € avec un <strong>essai gratuit de 7 jours</strong> (abonnement à renouvellement automatique)</li>
+      <li><strong>À vie :</strong> 29,99 € <strong>en une fois</strong> (achat unique, sans abonnement, sans renouvellement)</li>
+    </ul>
+  </div>
+  <p>Tous les produits s'appliquent à tous les appareils en tant qu'<strong>achat universel</strong> (iPhone, iPad, Mac).</p>
+  <p>8.3 <strong>Renouvellement automatique.</strong> Les abonnements à renouvellement automatique se renouvellent pour la durée respective au prix alors en vigueur affiché dans l'App Store, sauf résiliation via l'identifiant Apple <strong>au moins 24 heures avant la fin</strong> de la période en cours. La facturation est effectuée via votre compte identifiant Apple.</p>
+  <p>8.4 <strong>Gestion et résiliation.</strong> La gestion et la résiliation de vos abonnements sont possibles à tout moment dans les réglages de votre identifiant Apple. Une période d'essai gratuite est perdue (au prorata) si vous achetez un abonnement pendant l'essai. Vous pouvez réactiver des achats antérieurs dans l'application via « Restaurer les achats ».</p>
+  <p>8.5 <strong>Remboursements.</strong> Les remboursements sont effectués <strong>exclusivement via Apple</strong> conformément aux conditions Apple respectivement applicables (par exemple via <a href="https://reportaproblem.apple.com">https://reportaproblem.apple.com</a>). Les droits impératifs du consommateur à l'encontre du fournisseur demeurent inchangés (voir la section 7.4).</p>
+
+  <h2><span class="num">9.</span> Droit de rétractation pour les contenus numériques</h2>
+  <p>9.1 Facette Pro constitue un <strong>contenu numérique / des services numériques non fournis sur un support matériel</strong>.</p>
+  <p>9.2 Le droit de rétractation légal <strong>s'éteint</strong> prématurément dès lors que la fourniture a commencé <strong>après que vous avez expressément consenti à ce que l'exécution débute avant l'expiration du délai de rétractation et reconnu avoir conscience que vous perdez ainsi votre droit de rétractation</strong> (cf. art. 18, al. 1, n° 11 de la loi autrichienne sur les contrats à distance et hors établissement (FAGG), et art. 16 de la directive relative aux droits des consommateurs). En accédant immédiatement aux fonctionnalités Pro, vous consentez à une fourniture immédiate.</p>
+  <p>9.3 Le traitement pratique de toute rétractation ou de tout remboursement est régi par les conditions d'Apple (section 8.5). Les droits <strong>impératifs</strong> de résiliation, de rétractation et de garantie du consommateur demeurent <strong>inchangés</strong>.</p>
+
+  <h2><span class="num">10.</span> Cessation du service et « À vie »</h2>
+  <p>10.1 Le fournisseur peut à l'avenir modifier, interrompre ou cesser la distribution de l'application et de fonctions individuelles — par exemple pour des raisons économiques, techniques ou juridiques (par ex. en cas de modifications des systèmes d'exploitation ou des exigences de l'App Store d'Apple).</p>
+  <p>10.2 L'achat <strong>« À vie »</strong> est un <strong>achat unique portant sur l'utilisation de l'application sous la forme proposée</strong>. « À vie » se rapporte à la durée de vie du produit, <strong>et non</strong> à une durée d'exploitation garantie et illimitée, et ne constitue <strong>pas une assurance d'exploitation perpétuelle</strong> ni une garantie que l'application restera exploitable sur tous les appareils ou toutes les versions de systèmes d'exploitation futurs.</p>
+  <p>10.3 Si l'application est abandonnée, il n'existe — <strong>dans la mesure où la loi le permet</strong> — <strong>aucun</strong> droit à la poursuite de l'exploitation, à la fourniture d'un produit de remplacement, à un remboursement de la part du fournisseur ou à des dommages-intérêts. Les droits légaux impératifs demeurent <strong>inchangés</strong>, en particulier les obligations de garantie et de mise à jour pour les produits numériques en vertu du droit de la consommation de l'UE / autrichien (loi autrichienne sur la garantie de conformité des consommateurs, VGG, ou directive (UE) 2019/770), la responsabilité pour dol et faute lourde, ainsi que pour les dommages résultant d'une atteinte à la vie, à l'intégrité corporelle ou à la santé. Tout remboursement est en tout état de cause régi exclusivement par les conditions d'Apple (section 8.5).</p>
+
+  <h2><span class="num">11.</span> Avertissement santé (important — entraînement honnête)</h2>
+  <p>11.1 Facette n'est <strong>pas un dispositif médical</strong> et ne sert <strong>pas</strong> au diagnostic, au traitement, à la guérison, au soulagement ou à la prévention de maladies.</p>
+  <p>11.2 Facette ne promet <strong>aucune augmentation du QI</strong>, <strong>aucun accroissement général de l'intelligence</strong> et <strong>aucune prévention ni traitement de la démence</strong>.</p>
+  <p>11.3 Ce qui est essentiellement démontrable, c'est qu'une pratique régulière vous rend mesurablement meilleur aux <strong>tâches spécifiquement entraînées</strong> (<strong>transfert proche</strong>). Tout transfert au-delà de cela vers des capacités cognitives générales dans la vie quotidienne (<strong>transfert lointain</strong>) n'est pas scientifiquement établi et n'est <strong>pas</strong> promis par Facette.</p>
+  <p>11.4 Facette ne remplace pas un avis médical, thérapeutique ou psychologique. Si vous avez des troubles de santé, veuillez consulter des professionnels de santé qualifiés.</p>
+
+  <h2><span class="num">12.</span> Disponibilité et garantie</h2>
+  <p>12.1 L'application est fournie avec un soin raisonnable. Le fournisseur ne garantit toutefois — dans la mesure où la loi le permet — <strong>aucune</strong> <strong>disponibilité ininterrompue ou exempte d'erreurs</strong>, <strong>l'absence de défauts</strong> de l'application, ni l'obtention d'un <strong>succès (d'entraînement) particulier</strong>. L'application est fournie « en l'état » dans la mesure où la loi le permet.</p>
+  <p>12.2 Les droits légaux impératifs de garantie et de mise à jour des consommateurs demeurent <strong>inchangés</strong>, y compris les obligations relatives aux produits numériques en vertu du droit de l'UE / autrichien.</p>
+
+  <h2><span class="num">13.</span> Responsabilité</h2>
+  <p>13.1 Le fournisseur est responsable <strong>sans limitation</strong> en cas de dol et de faute lourde, pour les dommages résultant d'une atteinte à la vie, à l'intégrité corporelle ou à la santé, au titre de la loi sur la responsabilité du fait des produits, ainsi que dans tous les autres cas de responsabilité légale impérative.</p>
+  <p>13.2 En cas de manquement par <strong>négligence légère</strong> à une <strong>obligation contractuelle essentielle (obligation cardinale)</strong> — c'est-à-dire une obligation dont l'exécution permet en premier lieu l'utilisation régulière de l'application et sur le respect de laquelle vous pouvez régulièrement compter — la responsabilité est limitée au dommage prévisible typique de ce type de contrat.</p>
+  <p>13.3 Pour le reste, la responsabilité pour négligence légère est — <strong>dans la mesure où la loi le permet</strong> — exclue.</p>
+  <p>13.4 Cette disposition relative à la responsabilité ne s'applique que dans la mesure permise par le <strong>droit impératif de la consommation</strong>. Les droits et prétentions légaux impératifs allant au-delà demeurent <strong>inchangés</strong>. Les dispositions qui précèdent n'entraînent aucune modification de la charge de la preuve à votre détriment.</p>
+
+  <h2><span class="num">14.</span> Clause de divisibilité</h2>
+  <p>Si des dispositions individuelles du présent contrat étaient ou devenaient nulles ou inapplicables, en tout ou en partie, la validité des dispositions restantes n'en serait pas affectée. À l'égard des consommateurs, la disposition légale respectivement applicable se substitue à une disposition nulle ; une réduction destinée à préserver la validité au détriment des consommateurs n'a pas lieu.</p>
+
+  <h2><span class="num">15.</span> Droit applicable et règlement des litiges</h2>
+  <p>15.1 Le <strong>droit autrichien</strong> s'applique, à l'exclusion de la Convention des Nations Unies sur les contrats de vente internationale de marchandises (CISG) et des règles de renvoi du droit international privé.</p>
+  <p>15.2 Si vous êtes un <strong>consommateur</strong>, les <strong>dispositions impératives de protection des consommateurs de l'État de votre résidence habituelle</strong> demeurent <strong>inchangées</strong> par ce choix de loi (art. 6 du règlement Rome I).</p>
+  <p>15.3 <strong>For.</strong> Pour les actions du fournisseur contre les consommateurs, le tribunal du lieu de résidence du consommateur est exclusivement compétent. Les consommateurs peuvent assigner le fournisseur devant son for général ou — lorsque cela est admissible — devant le tribunal de leur propre lieu de résidence. Pour les utilisateurs qui ne sont pas des consommateurs, le siège social du fournisseur constitue le for.</p>
+  <p>15.4 <strong>Règlement en ligne des litiges.</strong> Remarque : La Commission européenne mettait à disposition une plateforme de règlement en ligne des litiges (dont l'exploitation a été abandonnée à compter du 20 juillet 2025). Le fournisseur n'est pas tenu de participer à une procédure de règlement des litiges devant un organe d'arbitrage de la consommation et n'y est généralement pas disposé.</p>
+
+  <h2><span class="num">16.</span> Modifications du contenu, des fonctionnalités et de la disponibilité</h2>
+  <p>16.1 Le fournisseur peut à tout moment, dans la mesure où la loi le permet et sans être tenu d'en indiquer les motifs, <strong>ajouter, modifier, mettre à jour, restreindre ou supprimer</strong> des contenus, des jeux, des fonctionnalités et des fonctions, et peut <strong>modifier ou interrompre la disponibilité</strong> de l'application ou de fonctionnalités individuelles <strong>sur des plateformes individuelles (iPhone, iPad, Mac) ou dans des régions individuelles</strong>, en tout ou en partie.</p>
+  <p>16.2 Il n'existe <strong>aucun droit</strong> à la disponibilité continue d'un contenu, d'une fonctionnalité, d'un jeu, d'une plateforme ou d'une région déterminés. Pour les fonctionnalités payantes déjà acquises, le fournisseur limitera toute atteinte substantielle au strict nécessaire.</p>
+  <p>16.3 Les droits légaux impératifs — en particulier les obligations de garantie et de mise à jour pour les produits numériques en vertu du droit de la consommation de l'UE / autrichien — demeurent <strong>inchangés</strong>.</p>
+
+  <h2><span class="num">17.</span> Dégagement de responsabilité (indemnisation)</h2>
+  <p>Dans la mesure où la loi le permet et dans la mesure où vous en êtes responsable, vous dégagez le fournisseur des <strong>réclamations justifiées de tiers</strong> résultant de votre <strong>utilisation illicite</strong> de l'application ou d'un <strong>manquement fautif</strong> de votre part aux présentes conditions. Cela ne s'applique <strong>pas</strong> à l'utilisation privée conforme et licite de l'application, ne porte pas atteinte à la protection impérative des consommateurs et est en tout état de cause limité à votre propre faute (votre contribution à la cause).</p>
+
+  <h2><span class="num">18.</span> Dispositions diverses</h2>
+  <p>18.1 <strong>Force majeure.</strong> Dans la mesure où la loi le permet, le fournisseur n'est pas responsable d'une inexécution ou d'un retard causé par des circonstances échappant à son contrôle raisonnable (par ex. interruptions des services Apple, des réseaux ou de l'infrastructure, injonctions des autorités, force majeure).</p>
+  <p>18.2 <strong>Cession.</strong> Le fournisseur peut transférer à un tiers, en tout ou en partie, ses droits et obligations découlant du présent contrat, à condition que cela ne diminue pas vos droits (en particulier les droits d'utilisation déjà acquis). Vous ne pouvez transférer vos droits découlant du présent contrat qu'avec le consentement préalable du fournisseur.</p>
+  <p>18.3 <strong>Intégralité de l'accord.</strong> Les présentes conditions, conjointement avec les Règles d'utilisation Apple et la Politique de confidentialité, constituent l'intégralité de l'accord entre vous et le fournisseur concernant l'utilisation de l'application et remplacent les arrangements antérieurs relatifs à cet objet. Les conditions générales divergentes de l'utilisateur ne s'appliquent pas.</p>
+  <p>18.4 <strong>Absence de renonciation.</strong> Le fait pour le fournisseur de ne pas faire valoir une disposition des présentes conditions ne constitue pas une renonciation à cette disposition ni à toute autre disposition.</p>
+  <p>18.5 <strong>Retours d'expérience.</strong> Si vous envoyez volontairement au fournisseur des suggestions ou des retours d'expérience, le fournisseur peut les utiliser sans restriction et gratuitement pour améliorer l'application, sans qu'aucune obligation ne naisse à votre égard.</p>
+
+  <h2><span class="num">19.</span> Âge minimum</h2>
+  <p>L'utilisation de l'application et la conclusion du présent contrat requièrent l'<strong>âge minimum</strong> applicable dans votre pays pour l'utilisation de l'App Store et pour la conclusion d'un tel contrat. Les <strong>mineurs</strong> ne peuvent utiliser l'application et effectuer des achats qu'avec le consentement d'un parent ou d'un représentant légal, qui accepte les présentes conditions en leur nom et est responsable de leur surveillance (y compris le partage familial Apple et les réglages de protection de la jeunesse).</p>
+
+  <h2><span class="num">20.</span> Modifications des présentes conditions</h2>
+  <p>Les présentes conditions peuvent être adaptées en cas de modifications de l'application, de l'offre ou de la situation juridique. Pour les abonnements en cours, les modifications s'appliquent au plus tôt à compter de la prochaine période de renouvellement ; les modifications substantielles seront rendues raisonnablement identifiables. La version respectivement en vigueur peut être consultée dans l'application sous <em>Réglages → Mentions légales et confidentialité</em> et sur <a href="https://facette.life">facette.life</a>. Votre utilisation continue après l'entrée en vigueur d'une modification vaut acceptation, dans la mesure où la loi le permet ; les droits impératifs des consommateurs demeurent inchangés.</p>
+
+  <h2><span class="num">21.</span> Contact</h2>
+  <p>Andreas Putzinger &middot; Courriel : <strong><a href="mailto:feedback@facette.life">feedback@facette.life</a></strong> &middot; Coordonnées complètes du fournisseur : <a href="imprint.html">Mentions légales</a>.</p>
+</main>
+
+<footer>
+  <p><strong>Facette</strong> — un entraînement cérébral honnête et apaisant. Andreas Putzinger, Autriche &middot; <a href="imprint.html">Mentions légales</a>.</p>
+  <p>Site web : <a href="https://facette.life">facette.life</a> &middot; Contact : <a href="mailto:feedback@facette.life">feedback@facette.life</a> &middot; Confidentialité : <a href="mailto:privacy@facette.life">privacy@facette.life</a> &middot; <a href="imprint.html">Mentions légales</a></p>
+  <p>Sans compte &middot; sans pistage &middot; aucune donnée personnelle ne quitte votre appareil. Les achats sont traités exclusivement via Apple ; le prix affiché par Apple fait foi.</p>
+</footer>
+
+</body>
+</html>
