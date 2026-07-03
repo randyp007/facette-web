@@ -3,6 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+/* Spracherkennung auf der Startseite: einmal pro Sitzung auf die passende Sprachseite
+   weiterleiten. Nur hier (Root); die /xx/-Seiten leiten nicht weiter → keine Schleifen.
+   Ohne JS oder für Suchmaschinen bleibt die englische Startseite sichtbar. */
+(function () {
+  try {
+    if (sessionStorage.getItem('facetteLangRedirect')) return;
+    var supported = ['de', 'en', 'fr', 'es', 'it', 'pt', 'nl'];
+    var langs = navigator.languages || [navigator.language || 'en'];
+    var pick = null;
+    for (var i = 0; i < langs.length && !pick; i++) {
+      var code = String(langs[i]).slice(0, 2).toLowerCase();
+      if (supported.indexOf(code) >= 0) pick = code;
+    }
+    sessionStorage.setItem('facetteLangRedirect', '1');
+    if (pick) location.replace('/' + pick + '/index.html');
+  } catch (e) { /* still stay on the English root */ }
+})();
+</script>
 <title>Facette — Honest 5-minute brain training</title>
 <meta name="description" content="Facette is honest, calm brain training. 5 minutes a day, 30 short games across 12 cognitive areas, adaptive. Local-first and private — no account, no tracking. For iPhone, iPad and Mac.">
 <style>
