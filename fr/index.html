@@ -173,6 +173,11 @@
   .store-badge .small { font-size: 0.72rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.08em; }
   .store-badge .big { font-size: 1.05rem; font-weight: 600; }
 
+  .qr-card { display: inline-flex; flex-direction: column; align-items: center; gap: 7px;
+    padding: 11px 11px 8px; border: 1px solid var(--gold); border-radius: 12px; background: #fff; text-decoration: none; }
+  .qr-card img { display: block; width: 108px; height: 108px; }
+  .qr-card .qr-cap { font-size: 0.68rem; font-weight: 600; color: #141821; text-transform: uppercase; letter-spacing: 0.06em; }
+
   .btn-ghost {
     display: inline-flex;
     align-items: center;
@@ -424,9 +429,13 @@
             <path d="M16.365 1.43c0 1.14-.42 2.22-1.24 3.03-.99.98-2.05 1.54-3.2 1.45-.14-1.11.42-2.28 1.19-3.02.87-.85 2.32-1.46 3.25-1.46zM20.5 17.02c-.53 1.22-.78 1.76-1.46 2.84-.95 1.51-2.29 3.39-3.95 3.4-1.48.02-1.86-.96-3.87-.95-2.01.01-2.43.97-3.91.95-1.66-.01-2.93-1.71-3.88-3.22C.96 16.02.75 11.06 2.36 8.42c1.14-1.86 2.94-2.95 4.63-2.95 1.72 0 2.8.96 4.22.96 1.38 0 2.22-.96 4.21-.96 1.5 0 3.1.82 4.24 2.24-3.72 2.04-3.12 7.35.84 9.31z"/>
           </svg>
           <span class="lines">
-            <span class="small">Bientôt sur l'</span>
+            <span class="small">Télécharger dans l'</span>
             <span class="big">App Store</span>
           </span>
+        </a>
+        <a class="qr-card" href="https://apps.apple.com/app/id6786462068" target="_blank" rel="noopener" aria-label="App Store QR">
+          <img src="/qr.svg" alt="QR" width="108" height="108">
+          <span class="qr-cap">Scannez pour télécharger</span>
         </a>
         <a class="btn-ghost" href="#what">En savoir plus</a>
       </div>
