@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Facette — Entraînement cérébral honnête de 5 minutes</title>
-<meta name="description" content="Facette est un entraînement cérébral honnête et apaisant. 5 minutes par jour, plus de 20 jeux courts couvrant 12 domaines cognitifs, adaptatif. Local d'abord et privé — sans compte, sans pistage. Pour iPhone, iPad et Mac.">
+<title>Facette – Entraînement cérébral, cinq minutes par jour</title>
+<meta name="description" content="Facette est un entraînement cérébral apaisant : cinq minutes par jour, plus de 20 jeux courts couvrant 12 domaines, adaptatif. Tout en local et privé — sans compte, sans publicité, sans pistage. Pour iPhone, iPad et Mac.">
 <style>
   :root {
     --bg: #0b0b0d;
@@ -355,6 +355,11 @@
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
   }
+
+  .screens{padding:64px 0;border-top:1px solid rgba(255,255,255,.08)}
+  .screens .shots{display:flex;gap:20px;overflow-x:auto;padding:20px 4px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+  .screens .shots img{height:560px;width:auto;border-radius:30px;border:1px solid rgba(255,255,255,.10);box-shadow:0 24px 60px rgba(0,0,0,.55);scroll-snap-align:center;flex:0 0 auto}
+  @media (max-width:640px){.screens .shots img{height:430px;border-radius:24px}}
 </style>
 </head>
 <body>
@@ -392,7 +397,7 @@
       <ul>
         <li><a href="#what">Qu'est-ce que c'est</a></li>
         <li><a href="#features">Fonctionnalités</a></li>
-        <li><a href="#honest">Honnêteté</a></li>
+        <li><a href="#honest">Ce qui nous distingue</a></li>
         <li><a href="#pricing">Tarifs</a></li>
         <li><a href="#privacy">Confidentialité</a></li>
       </ul>
@@ -429,7 +434,7 @@
         </g>
       </svg>
       <h1>Facette</h1>
-      <p class="claim">Entraînement cérébral honnête de 5 minutes</p>
+      <p class="claim">Cinq minutes pour ton esprit.</p>
       <p class="sub">Une pratique calme et concentrée pour votre esprit — plus de 20 jeux courts couvrant 12 domaines cognitifs, adaptés à vous. Cinq minutes par jour, sur iPhone, iPad et Mac. Sans compte, sans pistage, tout reste sur votre appareil.</p>
       <div class="cta-row">
         <a class="store-badge" href="https://apps.apple.com/app/id6786462068" target="_blank" rel="noopener" aria-label="Facette – App Store">
@@ -455,7 +460,22 @@
     <div class="wrap">
       <p class="eyebrow">Qu'est-ce que c'est</p>
       <h2>Une habitude quotidienne paisible pour votre esprit</h2>
-      <p class="lead">Facette, c'est l'entraînement cérébral sans le tapage. Chaque jour vous offre une séance courte et adaptative — assez longue pour compter, assez courte pour tenir dans la durée. Les jeux couvrent douze domaines cognitifs tels que l'attention, la mémoire, le raisonnement et la vitesse de traitement, et s'ajustent en douceur à votre niveau afin que vous travailliez toujours à la juste limite du défi. Aucun classement à courir après, aucun stratagème trompeur, aucune pression. Juste cinq minutes honnêtes.</p>
+      <p class="lead">Facette, c'est l'entraînement cérébral sans le tapage. Chaque jour vous offre une séance courte et adaptative — assez longue pour compter, assez courte pour tenir dans la durée. Les jeux couvrent douze domaines cognitifs tels que l'attention, la mémoire, le raisonnement et la vitesse de traitement, et s'ajustent en douceur à votre niveau afin que vous travailliez toujours à la juste limite du défi. Aucun classement à courir après, aucun stratagème trompeur, aucune pression. Juste cinq minutes.</p>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section id="screens" class="screens">
+    <div class="wrap">
+      <p class="eyebrow">Captures d'écran</p>
+      <h2>Découvrez Facette en action</h2>
+      <div class="shots">
+        <img src="../shots/home.png" alt="Facette" loading="lazy">
+        <img src="../shots/library.png" alt="Facette" loading="lazy">
+        <img src="../shots/radar.png" alt="Facette" loading="lazy">
+        <img src="../shots/calendar.png" alt="Facette" loading="lazy">
+        <img src="../shots/pro.png" alt="Facette" loading="lazy">
+      </div>
     </div>
   </section>
 
@@ -493,8 +513,8 @@
         </div>
         <div class="card">
           <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <h3>Cinq minutes honnêtes</h3>
-          <p>Court par conception. Une séance quotidienne concentrée qui s'adapte à la vraie vie au lieu de l'exiger.</p>
+          <h3>Cinq bonnes minutes</h3>
+          <p>Courte par conception. Une séance quotidienne concentrée qui s'adapte à la vraie vie au lieu de l'exiger.</p>
         </div>
       </div>
 
@@ -510,9 +530,9 @@
   <!-- HONEST -->
   <section id="honest" class="honest">
     <div class="wrap">
-      <p class="eyebrow">Science honnête</p>
-      <h2>Ce que nous promettons — et ce que nous ne promettons pas</h2>
-      <p class="lead">Nous pensons que les applications d'entraînement cérébral devraient être franches sur les preuves. S'exercer à une compétence vous rend de façon fiable meilleur à cette compétence et aux tâches étroitement apparentées. C'est le <strong>transfert proche</strong>, et il est réel. Les affirmations générales prétendant vous rendre plus intelligent dans la vie quotidienne relèvent du <strong>transfert lointain</strong>, que la science ne confirme pas. Nous ne prétendrons pas le contraire.</p>
+      <p class="eyebrow">Ce qui distingue Facette</p>
+      <h2>Calme, privé et sans esbroufe</h2>
+      <p class="lead">Facette n'est pas là pour faire du bruit. Sans compte, sans publicité, sans pistage — tout reste sur votre appareil. Les jeux s'adaptent à vous et restent calmes et équitables, sans stratagèmes trompeurs ni pression. Et nous ne promettons pas de miracles : Facette est un bon rituel quotidien, stimulant pour votre esprit — pas une pilule magique pour le cerveau.</p>
 
       <div class="grid">
         <div class="panel yes">
@@ -615,7 +635,7 @@
           </svg>
           Facette
         </span>
-        <p style="color:var(--ink-faint); max-width:32ch; margin:0 0 8px;">Un entraînement cérébral honnête et apaisant. Cinq minutes par jour, entièrement sur votre appareil.</p>
+        <p style="color:var(--ink-faint); max-width:32ch; margin:0 0 8px;">Un entraînement cérébral apaisant. Cinq minutes par jour, entièrement sur votre appareil.</p>
       </div>
 
       <div>
