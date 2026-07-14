@@ -1,0 +1,40 @@
+name: Daily quote
+
+# Regeneriert taeglich die "Spruch des Tages"-Seiten (deterministisch nach Tag-des-Jahres)
+# und committet sie zurueck in main -> GitHub Pages baut facette.life neu.
+# Deterministisch => kein LLM. Der Generator + die 200 Sprueche liegen unter .github/scripts/
+# (von GitHub Pages NICHT ausgeliefert, weil Dotfolder).
+
+on:
+  schedule:
+    - cron: '23 0 * * *'      # taeglich ~00:23 UTC (GitHub verzoegert geplante Laeufe leicht)
+  workflow_dispatch: {}         # manuell ausloesbar (Test)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-quote
+  cancel-in-progress: false
+
+jobs:
+  quote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Spruch des Tages regenerieren
+        run: python3 .github/scripts/gen_quote.py --root .
+
+      - name: Committen & pushen, falls geaendert
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name  "Facette Quote Bot"
+            git config user.email "quote@facette.life"
+            git add -A
+            git commit -m "Tagesspruch: $(date -u +%F)"
+            git push
+            echo "gepusht."
+          else
+            echo "keine Aenderung (Spruch bereits aktuell)."
+          fi
