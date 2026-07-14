@@ -82,7 +82,7 @@
 <main class="read">
   <p class="eyebrow">Rechtliches &amp; Datenschutz</p>
   <h1>Datenschutzerklärung</h1>
-  <p class="meta"><strong>Stand:</strong> 1. Juli 2026 &middot; <strong>Version:</strong> 1.1</p>
+  <p class="meta"><strong>Stand:</strong> 12. Juli 2026 &middot; <strong>Version:</strong> 1.2</p>
 
   <p class="transnote"><strong>Hinweis:</strong> Dies ist die maßgebliche deutschsprachige Originalfassung. Bei Zweifeln oder Widersprüchen ist die <strong>deutschsprachige Fassung maßgeblich</strong>.</p>
 
@@ -95,35 +95,47 @@
   </p>
   <p>Ein Datenschutzbeauftragter ist gesetzlich nicht erforderlich und wurde nicht bestellt.</p>
 
-  <h2>2. Grundsatz: Ihre Daten bleiben auf Ihrem Gerät</h2>
+  <h2>2. Grundsatz: Ihre Daten bleiben bei Ihnen</h2>
   <div class="callout">
-    <p>Facette ist bewusst <strong>„local-first"</strong> gebaut. <strong>Sämtliche</strong> Nutzungs- und Spieldaten — Ihr Trainingsfortschritt, Ihre Serie, Ihre Trainingspunkte, freigeschaltete Spiele, Ihr optionaler Vorname und Ihre Einstellungen — werden <strong>ausschließlich lokal auf Ihrem Gerät</strong> gespeichert (über Apples <code>UserDefaults</code>). Diese Daten <strong>verlassen das Gerät nicht</strong>.</p>
+    <p>Facette ist bewusst <strong>„local-first"</strong> gebaut. <strong>Standardmäßig</strong> werden <strong>sämtliche</strong> Nutzungs- und Spieldaten — Ihr Trainingsfortschritt, Ihre Serie, Ihre Trainingspunkte, freigeschaltete Spiele, Ihr optionaler Vorname und Ihre Einstellungen — <strong>ausschließlich lokal auf Ihrem Gerät</strong> gespeichert (über Apples <code>UserDefaults</code>) und verlassen dieses nicht. Nur wenn Sie den <strong>optionalen iCloud-Sync</strong> aktivieren (siehe Abschnitt 2a), wird zusätzlich eine Kopie in <strong>Ihrer eigenen persönlichen iCloud</strong> abgelegt, um Ihre Daten zwischen Ihren eigenen Geräten abzugleichen. In beiden Fällen gilt: Der <strong>Anbieter erhält nichts</strong>.</p>
   </div>
   <ul>
     <li>Es gibt <strong>keine vom Anbieter betriebenen Server</strong>. Die App stellt von sich aus <strong>keine</strong> <strong>Netzwerkverbindung</strong> zum Anbieter her.</li>
     <li>Es gibt <strong>kein Benutzerkonto</strong> und keine Registrierung.</li>
-    <li>Es gibt <strong>keine Cloud-Synchronisation</strong>; die Daten werden <strong>nicht</strong> über iCloud oder einen anderen Dienst synchronisiert (Stand dieser Version).</li>
+    <li>Standardmäßig findet <strong>kein geräteübergreifender Abgleich</strong> statt. Optional können Sie den <strong>iCloud-Sync</strong> einschalten — dann liegt eine Kopie <strong>ausschließlich in Ihrer eigenen iCloud</strong> (Apple), <strong>nie beim Anbieter</strong> (siehe Abschnitt 2a).</li>
     <li>Es werden <strong>keine</strong> Analyse-, Tracking-, Profiling- oder Werbetechnologien eingesetzt (keine Drittanbieter-SDKs). Es findet <strong>keine automatisierte Entscheidungsfindung</strong> statt. Dementsprechend erscheint auch <strong>kein</strong> App-Tracking-Transparency-Dialog.</li>
     <li>Der Anbieter <strong>erhebt, speichert, empfängt oder übermittelt keine</strong> personenbezogenen Daten über Sie — weder Ihren Namen noch Ihre IP-Adresse, Gerätekennungen oder Nutzungsdaten.</li>
   </ul>
   <p>Da beim Anbieter in der Praxis keine Verarbeitung personenbezogener Daten stattfindet, sind die klassischen datenschutzrechtlichen Pflichten (Verzeichnis von Verarbeitungstätigkeiten, Betroffenenrechte gegenüber dem Anbieter usw.) weitgehend gegenstandslos. Dennoch stellen wir Ihre Rechte vollständig dar (siehe Abschnitt 7).</p>
+
+  <h2>2a. Optionaler iCloud-Sync</h2>
+  <p>Facette bietet Ihnen die <strong>freiwillige</strong> Möglichkeit, Ihre Daten zwischen Ihren eigenen Apple-Geräten abzugleichen. Diese Funktion ist <strong>standardmäßig ausgeschaltet</strong>. Beim ersten Start werden Sie einmalig gefragt, ob Sie sie nutzen möchten; Sie können sie zudem jederzeit unter <em>Einstellungen → „iCloud &amp; Daten" → „iCloud-Sync"</em> ein- und ausschalten.</p>
+  <ul>
+    <li>Der Sync wird <strong>nur nach Ihrer ausdrücklichen Einwilligung</strong> aktiv. Ohne Ihr Zutun bleiben alle Daten ausschließlich lokal (siehe Abschnitt 2).</li>
+    <li>Wenn er eingeschaltet ist, wird eine <strong>Kopie Ihrer Fortschrittsdaten</strong> (Serie, Punkte, Level/ELO, freigeschaltete Spiele, optionaler Vorname und Einstellungen) in <strong>Ihrer eigenen, persönlichen iCloud</strong> gespeichert und ausschließlich zwischen den Geräten synchronisiert, die mit <strong>Ihrer Apple-ID</strong> angemeldet sind.</li>
+    <li>Der <strong>Anbieter hat auf diese Daten keinen Zugriff</strong>, betreibt hierfür <strong>keinen Server</strong> und bekommt sie zu <strong>keinem Zeitpunkt</strong> zu sehen. Die Daten liegen in Ihrer iCloud und unterliegen der <strong>Datenschutzerklärung von Apple</strong> (apple.com/legal/privacy).</li>
+    <li>Sie können den Sync <strong>jederzeit wieder ausschalten</strong>. Über die Schaltfläche <strong>„Alle Daten löschen"</strong> in den Einstellungen werden sämtliche Daten <strong>auf dem Gerät und in Ihrer iCloud</strong> gelöscht und der Sync anschließend deaktiviert.</li>
+    <li><strong>Rechtsgrundlage</strong> für diesen optionalen Abgleich ist Ihre <strong>Einwilligung</strong> (Art. 6 Abs. 1 lit. a DSGVO), die Sie jederzeit mit Wirkung für die Zukunft widerrufen können — etwa durch Ausschalten des Syncs.</li>
+  </ul>
 
   <h2>3. Einzelne Verarbeitungsvorgänge</h2>
   <ul>
     <li><strong>Vorname (optional):</strong> Wird nur verwendet, um Sie innerhalb der App persönlich zu begrüßen. Die Eingabe ist freiwillig; der Name verbleibt ausschließlich lokal auf dem Gerät und wird nicht an den Anbieter oder Dritte übermittelt.</li>
     <li><strong>Käufe (Facette Pro):</strong> In-App-Käufe und Abonnements werden vollständig von <strong>Apple</strong> (App Store / StoreKit) abgewickelt. Der Anbieter erhält von Apple <strong>keine</strong> Zahlungs-, Abrechnungs- oder Adressdaten und keine Namen von Käufern. Die App prüft lediglich den Kaufstatus (Berechtigung) <strong>lokal auf dem Gerät</strong>. Für die Zahlungsabwicklung ist <strong>Apple</strong> verantwortlich (Apple Distribution International Ltd. bzw. die im Rahmen der Apple Media Services für Sie zuständige Apple-Gesellschaft). Insoweit gilt die <strong>Apple-Datenschutzerklärung</strong> (apple.com/legal/privacy). Der Anbieter hat auf diese Verarbeitung keinen Einfluss.</li>
     <li><strong>Tägliche Erinnerung (optional):</strong> Wenn Sie sie aktivieren, wird die Benachrichtigung <strong>rein lokal auf Ihrem Gerät</strong> geplant (Apple <code>UserNotifications</code>). Es gibt <strong>keinen</strong> Push-Server und <strong>keine</strong> Übermittlung an Dritte.</li>
+    <li><strong>iCloud-Sync (optional, standardmäßig aus):</strong> siehe Abschnitt 2a. Nur nach Ihrer Einwilligung wird eine Kopie Ihrer Fortschrittsdaten in Ihrer eigenen persönlichen iCloud gespeichert und zwischen Ihren Geräten abgeglichen. Der Anbieter erhält diese Daten nicht und hat keinen Zugriff darauf.</li>
     <li><strong>Betriebssystem-Diagnose:</strong> Wenn Sie in den Systemeinstellungen Ihres Geräts die Weitergabe von Absturz- und Diagnosedaten an Apple aktiviert haben, kann das Betriebssystem solche Daten an Apple senden. Dies ist eine Funktion von Apple, nicht des Anbieters; der Anbieter erhält daraus keine personenbezogenen Daten.</li>
   </ul>
 
   <h2>4. Rechtsgrundlagen (DSGVO)</h2>
-  <p>Soweit innerhalb der App überhaupt eine Verarbeitung stattfindet, dient sie allein der Bereitstellung der von Ihnen gewünschten Funktionen (Art. 6 Abs. 1 lit. b DSGVO) sowie dem berechtigten Interesse an einer funktionsfähigen, besonders datensparsamen App (Art. 6 Abs. 1 lit. f DSGVO). Da alle Daten lokal auf Ihrem Gerät verbleiben, findet <strong>keine Übermittlung</strong> an den Anbieter oder Dritte statt. Eine Übermittlung in Drittländer erfolgt durch den Anbieter nicht.</p>
+  <p>Soweit innerhalb der App überhaupt eine Verarbeitung stattfindet, dient sie allein der Bereitstellung der von Ihnen gewünschten Funktionen (Art. 6 Abs. 1 lit. b DSGVO) sowie dem berechtigten Interesse an einer funktionsfähigen, besonders datensparsamen App (Art. 6 Abs. 1 lit. f DSGVO). Standardmäßig verbleiben alle Daten lokal auf Ihrem Gerät, sodass <strong>keine Übermittlung</strong> an den Anbieter oder Dritte stattfindet. Aktivieren Sie den <strong>optionalen iCloud-Sync</strong> (siehe Abschnitt 2a), werden Ihre Daten auf Grundlage Ihrer <strong>Einwilligung</strong> (Art. 6 Abs. 1 lit. a DSGVO) in Ihrer <strong>eigenen iCloud</strong> gespeichert und zwischen Ihren Geräten abgeglichen — auch dann erfolgt <strong>keine Übermittlung an den Anbieter</strong>. Eine Übermittlung in Drittländer erfolgt durch den Anbieter nicht.</p>
 
   <h2>5. Weitergabe an Dritte</h2>
   <p><strong>Keine.</strong> Der Anbieter gibt keine personenbezogenen Daten an Dritte weiter und verkauft keine Daten. Der einzige Berührungspunkt mit einem Dritten ist <strong>Apple</strong> im Rahmen der Kaufabwicklung (siehe Abschnitt 3), auf die der Anbieter keinen Einfluss hat und für die Apple eigenständig verantwortlich ist.</p>
 
   <h2>6. Speicherdauer &amp; Löschung</h2>
   <p>Die lokal gespeicherten Daten verbleiben auf Ihrem Gerät, bis Sie sie löschen oder die App deinstallieren. <strong>Das Löschen der App</strong> entfernt alle lokal gespeicherten Facette-Daten. Eine Löschung durch den Anbieter ist weder möglich noch erforderlich, da beim Anbieter keine Daten vorliegen.</p>
+  <p>Haben Sie den <strong>iCloud-Sync</strong> genutzt, verbleibt eine Kopie in Ihrer eigenen iCloud, bis Sie diese löschen. Am einfachsten geht das über die Schaltfläche <strong>„Alle Daten löschen"</strong> in den Einstellungen — sie entfernt die Daten <strong>auf dem Gerät und in Ihrer iCloud</strong> und deaktiviert anschließend den Sync. Alternativ können Sie die iCloud-Daten der App über die <strong>iCloud-Einstellungen Ihres Geräts</strong> entfernen.</p>
 
   <h2>7. Ihre Rechte</h2>
   <p>Nach der DSGVO stehen Ihnen grundsätzlich die Rechte auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21) zu.</p>
@@ -135,7 +147,7 @@
   <p>Facette richtet sich an ein allgemeines Publikum und ist auch für Kinder und Jugendliche unbedenklich, da die App <strong>keinerlei personenbezogene Daten erhebt oder übermittelt</strong>. Es werden wissentlich keine Daten von Kindern verarbeitet; mangels jeglicher Datenerhebung geschieht dies technisch ohnehin nicht. Käufe unterliegen den Jugendschutz- und Familienfreigabe-Einstellungen von Apple.</p>
 
   <h2>9. Änderungen dieser Erklärung</h2>
-  <p>Diese Erklärung kann angepasst werden, wenn sich die App oder die Rechtslage ändert. Sollte künftig eine Funktion eingeführt werden, durch die Daten das Gerät verlassen (z. B. optionale iCloud-Synchronisation), wird diese Erklärung entsprechend <strong>vorab</strong> aktualisiert. Die aktuelle Fassung kann in der App unter <em>Einstellungen → Rechtliches &amp; Datenschutz</em> eingesehen werden.</p>
+  <p>Diese Erklärung kann angepasst werden, wenn sich die App oder die Rechtslage ändert. Wesentliche Änderungen — wie der mit <strong>Version 1.2</strong> eingeführte optionale iCloud-Sync — werden hier dokumentiert. Die aktuelle Fassung kann in der App unter <em>Einstellungen → Rechtliches &amp; Datenschutz</em> eingesehen werden.</p>
 
   <h2>10. Kontakt</h2>
   <p>Bei Fragen zum Datenschutz: <a href="mailto:privacy@facette.life">privacy@facette.life</a></p>

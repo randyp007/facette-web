@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#0C0F14"/>
+<circle cx="120" cy="110" r="13" fill="#FFD27A"/>
+<text x="150" y="120" font-family="Georgia, 'New York', serif" font-size="34" fill="#EDF1F8">Facette</text>
+<text x="120" y="200" font-family="-apple-system, sans-serif" font-size="20" letter-spacing="4" fill="#F5A623">SPRUCH DES TAGES</text>
+<foreignObject x="110" y="240" width="980" height="280">
+<div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Georgia,'New York',serif;font-size:52px;line-height:1.2;color:#F3ECDA">Hier bist du niemandes Aufgabe.</div>
+</foreignObject>
+<text x="120" y="580" font-family="-apple-system, sans-serif" font-size="22" fill="#9AA4B2">Fünf Minuten für deinen Kopf · werbefrei</text>
+</svg>

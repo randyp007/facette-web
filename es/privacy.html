@@ -82,7 +82,7 @@
 <main class="read">
   <p class="eyebrow">Aspectos legales y privacidad</p>
   <h1>Política de Privacidad</h1>
-  <p class="meta"><strong>Con fecha de:</strong> 1 de julio de 2026 &middot; <strong>Versión:</strong> 1.1</p>
+  <p class="meta"><strong>Con fecha de:</strong> 12 de julio de 2026 &middot; <strong>Versión:</strong> 1.2</p>
 
   <p class="transnote"><strong>Nota:</strong> Esta es una traducción del original en alemán, facilitada para su comodidad. En caso de duda o conflicto, <strong>la versión alemana prevalece</strong>.</p>
 
@@ -95,18 +95,27 @@
   </p>
   <p>No se exige legalmente la designación de un delegado de protección de datos y no se ha nombrado ninguno.</p>
 
-  <h2>2. Principio: tus datos permanecen en tu dispositivo</h2>
+  <h2>2. Principio: tus datos permanecen contigo</h2>
   <div class="callout">
-    <p>Facette está deliberadamente diseñada como <strong>«local-first»</strong>. <strong>Todos</strong> los datos de uso y de juego —tu progreso de entrenamiento, tu racha, tus puntos de entrenamiento, los juegos desbloqueados, tu nombre de pila opcional y tus ajustes— se almacenan <strong>exclusivamente de forma local en tu dispositivo</strong> (a través de <code>UserDefaults</code> de Apple). Estos datos <strong>no salen del dispositivo</strong>.</p>
+    <p>Facette está deliberadamente diseñada como <strong>«local-first»</strong>. De forma predeterminada, <strong>todos</strong> los datos de uso y de juego —tu progreso de entrenamiento, tu racha, tus puntos de entrenamiento, los juegos desbloqueados, tu nombre de pila opcional y tus ajustes— se almacenan <strong>exclusivamente de forma local en tu dispositivo</strong> (a través de <code>UserDefaults</code> de Apple). Únicamente si tú activas la <strong>sincronización opcional con iCloud</strong> (véase el apartado 2a) se coloca además una copia de estos datos en <strong>tu iCloud personal</strong>, con el fin de sincronizarlos entre tus propios dispositivos. En ambos casos, el proveedor <strong>no recibe ningún dato</strong>.</p>
   </div>
   <ul>
     <li>No existen <strong>servidores</strong> operados por el proveedor. La aplicación <strong>no</strong> establece por iniciativa propia ninguna <strong>conexión de red</strong> con el proveedor.</li>
     <li>No existe <strong>ninguna cuenta de usuario</strong> ni registro.</li>
-    <li>No existe <strong>ninguna sincronización en la nube</strong>; los datos <strong>no</strong> se sincronizan a través de iCloud ni de ningún otro servicio (a fecha de esta versión).</li>
+    <li>De forma predeterminada <strong>no se realiza ninguna sincronización entre dispositivos</strong>. De manera opcional puedes activar la <strong>sincronización con iCloud</strong>: en tal caso, una copia de tus datos se guarda <strong>únicamente en tu propio iCloud</strong> (Apple) y <strong>nunca</strong> con el proveedor (véase el apartado 2a).</li>
     <li><strong>No</strong> se utilizan tecnologías de analítica, rastreo, elaboración de perfiles ni publicidad (sin SDK de terceros). No existe <strong>ninguna toma de decisiones automatizada</strong>. En consecuencia, <strong>tampoco</strong> aparece ningún cuadro de diálogo de Transparencia en el Seguimiento de Aplicaciones (App Tracking Transparency).</li>
     <li>El proveedor <strong>no recopila, almacena, recibe ni transmite ningún</strong> dato personal sobre ti: ni tu nombre, ni tu dirección IP, ni identificadores de dispositivo ni datos de uso.</li>
   </ul>
   <p>Dado que en la práctica no tiene lugar ningún tratamiento de datos personales en el proveedor, las obligaciones clásicas de protección de datos (registro de las actividades de tratamiento, derechos de los interesados frente al proveedor, etc.) carecen en gran medida de aplicación. No obstante, exponemos tus derechos en su totalidad (véase el apartado 7).</p>
+
+  <h2>2a. Sincronización opcional con iCloud</h2>
+  <p>A partir de la versión 1.2, Facette ofrece una <strong>sincronización con iCloud de carácter opcional</strong>. Está <strong>desactivada de forma predeterminada</strong>: en el primer inicio se te pregunta una única vez si deseas activarla, y puedes cambiar esta elección en cualquier momento en <em>Ajustes → «iCloud y datos» → «Sincronización con iCloud»</em>.</p>
+  <ul>
+    <li><strong>Qué se sincroniza:</strong> Mientras esté activada, se guarda una copia de tus datos de progreso —tu racha, tus puntos, tus niveles (ELO), los juegos desbloqueados, tu nombre de pila opcional y tus ajustes— en <strong>tu iCloud personal</strong> y se sincroniza <strong>únicamente entre tus propios dispositivos</strong> (los que utilizan el mismo Apple ID).</li>
+    <li><strong>Dónde se guardan tus datos:</strong> La copia reside <strong>exclusivamente en tu iCloud personal y privado</strong> (Apple). El proveedor <strong>no tiene acceso</strong> a ella, no opera ningún servidor y <strong>nunca la ve</strong>. A estos datos alojados en tu iCloud se aplica la <strong>Política de Privacidad de Apple</strong> (apple.com/legal/privacy).</li>
+    <li><strong>Desactivación:</strong> Puedes desactivar la sincronización en cualquier momento. Además, el nuevo botón <strong>«Eliminar todos los datos»</strong> de los <em>Ajustes</em> borra todos los datos <strong>tanto en el dispositivo como en tu iCloud</strong> y, a continuación, desactiva la sincronización.</li>
+    <li><strong>Base jurídica:</strong> El tratamiento se basa en tu <strong>consentimiento</strong> (art. 6, apdo. 1, letra a, RGPD), que puedes revocar en cualquier momento con efectos para el futuro (desactivando la sincronización).</li>
+  </ul>
 
   <h2>3. Operaciones de tratamiento concretas</h2>
   <ul>
@@ -114,16 +123,17 @@
     <li><strong>Compras (Facette Pro):</strong> Las compras integradas y las suscripciones las gestiona íntegramente <strong>Apple</strong> (App Store / StoreKit). El proveedor <strong>no</strong> recibe de Apple ningún dato de pago, facturación o dirección, ni los nombres de los compradores. La aplicación se limita a comprobar el estado de la compra (derecho de uso) <strong>de forma local en el dispositivo</strong>. <strong>Apple</strong> es responsable de la tramitación de los pagos (Apple Distribution International Ltd. o la entidad de Apple responsable respecto de ti en el marco de los Servicios de Medios de Apple). A este respecto se aplica la <strong>Política de Privacidad de Apple</strong> (apple.com/legal/privacy). El proveedor no tiene influencia alguna sobre este tratamiento.</li>
     <li><strong>Recordatorio diario (opcional):</strong> Si lo activas, la notificación se programa <strong>de forma puramente local en tu dispositivo</strong> (<code>UserNotifications</code> de Apple). No existe <strong>ningún</strong> servidor de notificaciones push ni <strong>ninguna</strong> transmisión a terceros.</li>
     <li><strong>Diagnósticos del sistema operativo:</strong> Si has activado en los ajustes del sistema de tu dispositivo el envío de datos de fallos y diagnóstico a Apple, el sistema operativo puede enviar tales datos a Apple. Se trata de una función de Apple, no del proveedor; el proveedor no recibe de ello ningún dato personal.</li>
+    <li><strong>Sincronización con iCloud (opcional, desactivada por defecto):</strong> véase el apartado 2a. Solo si tú la activas, una copia de tus datos de progreso se guarda en tu iCloud personal (Apple) para sincronizarlos entre tus propios dispositivos; el proveedor no recibe de ello ningún dato.</li>
   </ul>
 
   <h2>4. Bases jurídicas (RGPD)</h2>
-  <p>En la medida en que tenga lugar algún tratamiento dentro de la aplicación, este sirve únicamente para prestar las funciones que has solicitado (art. 6, apdo. 1, letra b, RGPD) así como el interés legítimo en una aplicación funcional y, en particular, respetuosa con la minimización de datos (art. 6, apdo. 1, letra f, RGPD). Puesto que todos los datos permanecen de forma local en tu dispositivo, <strong>no</strong> tiene lugar ninguna transferencia al proveedor ni a terceros. El proveedor no lleva a cabo ninguna transferencia a terceros países.</p>
+  <p>En la medida en que tenga lugar algún tratamiento dentro de la aplicación, este sirve únicamente para prestar las funciones que has solicitado (art. 6, apdo. 1, letra b, RGPD) así como el interés legítimo en una aplicación funcional y, en particular, respetuosa con la minimización de datos (art. 6, apdo. 1, letra f, RGPD). De forma predeterminada, todos los datos permanecen de forma local en tu dispositivo. Si activas la <strong>sincronización opcional con iCloud</strong> (véase el apartado 2a), una copia de tus datos se almacena en tu propio iCloud sobre la base de tu <strong>consentimiento</strong> (art. 6, apdo. 1, letra a, RGPD); tampoco en este caso tiene lugar ninguna transferencia al proveedor. El proveedor no lleva a cabo ninguna transferencia a terceros países.</p>
 
   <h2>5. Comunicación a terceros</h2>
   <p><strong>Ninguna.</strong> El proveedor no comunica ningún dato personal a terceros y no vende ningún dato. El único punto de contacto con un tercero es <strong>Apple</strong> en el contexto de la tramitación de las compras (véase el apartado 3), sobre la que el proveedor no tiene influencia alguna y de la que Apple es responsable de forma independiente.</p>
 
   <h2>6. Plazo de conservación y supresión</h2>
-  <p>Los datos almacenados de forma local permanecen en tu dispositivo hasta que los borres o desinstales la aplicación. <strong>Borrar la aplicación</strong> elimina todos los datos de Facette almacenados de forma local. La supresión por parte del proveedor no es posible ni necesaria, ya que el proveedor no conserva ningún dato.</p>
+  <p>Los datos almacenados de forma local permanecen en tu dispositivo hasta que los borres o desinstales la aplicación. <strong>Borrar la aplicación</strong> elimina todos los datos de Facette almacenados de forma local. Si has utilizado la <strong>sincronización con iCloud</strong> (véase el apartado 2a), una copia permanece en tu iCloud personal hasta que la elimines; la forma más sencilla de hacerlo es con el botón <strong>«Eliminar todos los datos»</strong> de los <em>Ajustes</em> (que borra los datos tanto de forma local como en tu iCloud) o a través de los ajustes de iCloud de tu dispositivo. La supresión por parte del proveedor no es posible ni necesaria, ya que el proveedor no conserva ningún dato.</p>
 
   <h2>7. Tus derechos</h2>
   <p>Con arreglo al RGPD, te asisten, en principio, los derechos de acceso (art. 15), rectificación (art. 16), supresión (art. 17), limitación del tratamiento (art. 18), portabilidad de los datos (art. 20) y oposición (art. 21).</p>
@@ -135,7 +145,7 @@
   <p>Facette está dirigida a un público general y es también segura para niños y jóvenes, ya que la aplicación <strong>no recopila ni transmite absolutamente ningún dato personal</strong>. No se tratan conscientemente datos de niños; a falta de cualquier recopilación de datos, esto tampoco sucede técnicamente. Las compras están sujetas a los ajustes de protección de menores y de «En familia» de Apple.</p>
 
   <h2>9. Cambios en esta política</h2>
-  <p>Esta política puede ajustarse si la aplicación o la situación jurídica cambian. En caso de que en el futuro se introduzca una función que provoque que los datos salgan del dispositivo (p. ej., una sincronización opcional con iCloud), esta política se actualizará en consecuencia <strong>con antelación</strong>. La versión vigente puede consultarse en la aplicación en <em>Ajustes → Aspectos legales y privacidad</em>.</p>
+  <p>Esta política puede ajustarse si la aplicación o la situación jurídica cambian. Los cambios sustanciales —como la <strong>sincronización opcional con iCloud</strong> introducida en la versión 1.2— se documentan aquí. La versión vigente puede consultarse en la aplicación en <em>Ajustes → Aspectos legales y privacidad</em>.</p>
 
   <h2>10. Contacto</h2>
   <p>Para consultas sobre protección de datos: <a href="mailto:privacy@facette.life">privacy@facette.life</a></p>
