@@ -61,11 +61,11 @@ footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
 L = {
  "en": dict(lang="en", eyebrow="Quote of the day", date_fmt="%B %-d, %Y",
    title="Quote of the day — Facette", back="← facette.life",
-   sub="A calm, ad-free five minutes for your mind. 20+ short brain games that adapt to you — on iPhone, iPad and Mac.",
+   sub="A calm, ad-free five minutes for your mind. 40 short brain games that adapt to you — on iPhone, iPad and Mac.",
    cta="Get Facette", home=f"{SITE}/en/index.html", archive_h="All quotes"),
  "de": dict(lang="de", eyebrow="Spruch des Tages", date_fmt="%-d. %B %Y",
    title="Spruch des Tages — Facette", back="← facette.life",
-   sub="Fünf ruhige, werbefreie Minuten für deinen Kopf. 20+ kurze Denkspiele, die sich dir anpassen — auf iPhone, iPad und Mac.",
+   sub="Fünf ruhige, werbefreie Minuten für deinen Kopf. 40 kurze Denkspiele, die sich dir anpassen — auf iPhone, iPad und Mac.",
    cta="Facette holen", home=f"{SITE}/de/index.html", archive_h="Alle Sprüche"),
 }
 MONTHS_DE = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"]
