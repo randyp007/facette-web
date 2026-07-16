@@ -74,4 +74,32 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://facette.life/en/learn/focus.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://facette.life/en/learn/focus.html"/>
   </url>
+  <url>
+    <loc>https://facette.life/en/learn/logic.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://facette.life/en/learn/logic.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://facette.life/de/learn/logic.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://facette.life/en/learn/logic.html"/>
+  </url>
+  <url>
+    <loc>https://facette.life/en/learn/memory.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://facette.life/en/learn/memory.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://facette.life/de/learn/memory.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://facette.life/en/learn/memory.html"/>
+  </url>
+  <url>
+    <loc>https://facette.life/en/learn/processing-speed.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://facette.life/en/learn/processing-speed.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://facette.life/de/learn/processing-speed.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://facette.life/en/learn/processing-speed.html"/>
+  </url>
+  <url>
+    <loc>https://facette.life/en/learn/spatial-reasoning.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://facette.life/en/learn/spatial-reasoning.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://facette.life/de/learn/spatial-reasoning.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://facette.life/en/learn/spatial-reasoning.html"/>
+  </url>
 </urlset>
