@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://facette.life/en/index.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://facette.life/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://facette.life/de/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://facette.life/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facette.life/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://facette.life/it/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://facette.life/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://facette.life/nl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://facette.life/en/index.html"/>
+  </url>
+  <url>
+    <loc>https://facette.life/en/press.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://facette.life/en/press.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://facette.life/de/press.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://facette.life/fr/press.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facette.life/es/press.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://facette.life/it/press.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://facette.life/pt/press.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://facette.life/nl/press.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://facette.life/en/press.html"/>
+  </url>
+  <url>
+    <loc>https://facette.life/en/quote.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://facette.life/en/quote.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://facette.life/de/quote.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://facette.life/en/quote.html"/>
+  </url>
+  <url>
+    <loc>https://facette.life/en/privacy.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://facette.life/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://facette.life/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://facette.life/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facette.life/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://facette.life/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://facette.life/pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://facette.life/nl/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://facette.life/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://facette.life/en/eula.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://facette.life/en/eula.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://facette.life/de/eula.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://facette.life/fr/eula.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facette.life/es/eula.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://facette.life/it/eula.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://facette.life/pt/eula.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://facette.life/nl/eula.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://facette.life/en/eula.html"/>
+  </url>
+  <url>
+    <loc>https://facette.life/en/imprint.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://facette.life/en/imprint.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://facette.life/de/imprint.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://facette.life/fr/imprint.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://facette.life/es/imprint.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://facette.life/it/imprint.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://facette.life/pt/imprint.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://facette.life/nl/imprint.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://facette.life/en/imprint.html"/>
+  </url>
+  <url>
+    <loc>https://facette.life/en/learn/focus.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://facette.life/en/learn/focus.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://facette.life/en/learn/focus.html"/>
+  </url>
+</urlset>

@@ -41,3 +41,5 @@ Disallow: /es/gift.html
 Disallow: /it/gift.html
 Disallow: /pt/gift.html
 Disallow: /nl/gift.html
+
+Sitemap: https://facette.life/sitemap.xml
