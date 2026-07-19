@@ -6,6 +6,7 @@
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
 <meta name="googlebot" content="noindex, nofollow">
 <meta name="robots" content="noai, noimageai">
+<meta name="referrer" content="no-referrer">
 <title>A free month of Pro, to pass along — Facette</title>
 <meta name="description" content="Give Facette Pro: a free month from us to pass along to someone you like. Calm, ad-free brain training on iPhone, iPad, and Mac. Redeem the code inside.">
 <meta name="apple-itunes-app" content="app-id=6786462068">
@@ -71,16 +72,19 @@ footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
   <a class="back" href="/en/index.html">← facette.life</a>
 </div></header>
 <main class="read">
+  <p class="eyebrow" id="giftFor" hidden>For you</p>
+  <p class="lead" id="giftFrom" data-tpl="%s gifted you a few quiet minutes." hidden></p>
+  <blockquote id="giftNote" hidden></blockquote>
   <p class="eyebrow">Give Facette</p>
   <h1>A free month of Pro, to pass along</h1>
   <p class="lead">This one&#x27;s on us. A free month of Facette Pro — the whole calm, ad-free ritual, running quietly on their own device — for someone you like. Nothing to wrap, no card to sign. Just pass along the code below and let them keep the good minutes.</p>
 
   <div class="codebox">
     <p class="lbl">Gift code</p>
-    <p class="code"><!--CODE-->XXXX-XXXX<!--/CODE--></p>
-    <p class="exp">Valid until <!--EXPIRES-->—<!--/EXPIRES--></p>
+    <p class="code"><!--CODE-->1MONTH4FRIENDS<!--/CODE--></p>
+    <p class="exp">Valid until <!--EXPIRES-->2026-12-31<!--/EXPIRES--></p>
   </div>
-  <p><a class="cta" href="https://apps.apple.com/redeem?ctx=offercodes&id=6786462068">Redeem in the App Store</a></p>
+  <p><a class="cta" rel="noreferrer" href="https://apps.apple.com/redeem?ctx=offercodes&id=6786462068&code=1MONTH4FRIENDS">Redeem in the App Store</a></p>
   <p class="small">Runs on the device · ad-free · no account</p>
 
   <h2>How to redeem</h2>
@@ -88,6 +92,29 @@ footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
 
   <div class="callout"><p>The free month is genuinely free. When it ends, Facette Pro simply continues as a regular monthly subscription at the standard App Store price, billed through the Apple account it&#x27;s redeemed on — so it only carries on if you want it to. Cancel anytime: two taps in your Apple account settings, at least a day before the month is up, and you won&#x27;t be charged.</p></div>
 </main>
+<script>
+/* Selbst-enthaltene, wohlwollende Personalisierung aus dem URL-Fragment (#from/#note). Kein Fetch,
+   kein externes Skript. Fremd-Input wird gekappt/entzeilt und AUSSCHLIESSLICH via textContent gesetzt
+   (nie als Markup) -> keine Injektion. Bei Fehlern still auf die schlichte Variante zurueckfallen. */
+(function () {
+  try {
+    var p = new URLSearchParams((location.hash || "").replace(/^#/, ""));
+    var from = (p.get("from") || "").replace(/[\r\n]+/g, " ").trim().slice(0, 32);
+    var note = (p.get("note") || "").replace(/[\r\n]+/g, " ").trim().slice(0, 140);
+    if (from) {
+      var fl = document.getElementById("giftFrom");
+      fl.textContent = (fl.getAttribute("data-tpl") || "%s").replace("%s", function () { return from; });
+      fl.hidden = false;
+      document.getElementById("giftFor").hidden = false;
+    }
+    if (note) {
+      var nl = document.getElementById("giftNote");
+      nl.textContent = "\u201E" + note + "\u201C";
+      nl.hidden = false;
+    }
+  } catch (e) {}
+})();
+</script>
 <footer><div class="wrap">
   <span>&copy; 2026 Facette &middot; Andreas Putzinger, Austria</span>
   <span><a href="/en/index.html">Home</a> &middot; <a href="/en/privacy.html">Privacy</a> &middot; <a href="mailto:press@facette.life">press@facette.life</a></span>

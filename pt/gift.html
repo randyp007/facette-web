@@ -6,12 +6,13 @@
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
 <meta name="googlebot" content="noindex, nofollow">
 <meta name="robots" content="noai, noimageai">
+<meta name="referrer" content="no-referrer">
 <title>Um mês de Pro, para ofereceres a alguém de quem gostas. — Facette</title>
-<meta name="description" content="Um presente da Facette: um mês de Pro para ofereceres a alguém. Todos os jogos, sem anúncios, tudo no dispositivo. Resgata o código na App Store.">
+<meta name="description" content="Um presente da Facette: um mês de Pro para ofereceres a alguém. Treino cerebral sereno e sem anúncios no iPhone, iPad e Mac. Resgata o código na App Store.">
 <meta name="apple-itunes-app" content="app-id=6786462068">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Um mês de Pro, para ofereceres a alguém de quem gostas. — Facette">
-<meta property="og:description" content="Um presente da Facette: um mês de Pro para ofereceres a alguém. Todos os jogos, sem anúncios, tudo no dispositivo. Resgata o código na App Store.">
+<meta property="og:description" content="Um presente da Facette: um mês de Pro para ofereceres a alguém. Treino cerebral sereno e sem anúncios no iPhone, iPad e Mac. Resgata o código na App Store.">
 <meta property="og:image" content="https://facette.life/shots/pro.png">
 <meta property="og:url" content="https://facette.life/pt/gift.html">
 <meta name="twitter:card" content="summary_large_image">
@@ -71,23 +72,49 @@ footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
   <a class="back" href="/pt/index.html">← facette.life</a>
 </div></header>
 <main class="read">
+  <p class="eyebrow" id="giftFor" hidden>Para ti</p>
+  <p class="lead" id="giftFrom" data-tpl="%s ofereceu-te uns minutos tranquilos." hidden></p>
+  <blockquote id="giftNote" hidden></blockquote>
   <p class="eyebrow">Oferecer a Facette</p>
   <h1>Um mês de Pro, para ofereceres a alguém de quem gostas.</h1>
-  <p class="lead">Este é um presente da Facette — um mês de Pro para passares a alguém de quem gostas. Basta partilhares o código, e a pessoa recebe um acesso sereno a todos os jogos, sem um único anúncio, com tudo a ficar no próprio dispositivo. Cinco minutos para a mente, agora para dar.</p>
+  <p class="lead">Este é um presente da Facette — um mês de Pro para ofereceres a alguém de quem gostas. Sereno e sem publicidade, tudo no próprio dispositivo, sem conta e sem rastreio. Basta partilhares o código — cinco minutos calmos por dia, para dar.</p>
 
   <div class="codebox">
     <p class="lbl">Código de oferta</p>
-    <p class="code"><!--CODE-->XXXX-XXXX<!--/CODE--></p>
-    <p class="exp">Válido até <!--EXPIRES-->—<!--/EXPIRES--></p>
+    <p class="code"><!--CODE-->1MONTH4FRIENDS<!--/CODE--></p>
+    <p class="exp">Válido até <!--EXPIRES-->2026-12-31<!--/EXPIRES--></p>
   </div>
-  <p><a class="cta" href="https://apps.apple.com/redeem?ctx=offercodes&id=6786462068">Resgatar na App Store</a></p>
+  <p><a class="cta" rel="noreferrer" href="https://apps.apple.com/redeem?ctx=offercodes&id=6786462068&code=1MONTH4FRIENDS">Resgatar na App Store</a></p>
   <p class="small">Funciona no dispositivo · sem publicidade · sem conta</p>
 
   <h2>Como resgatar</h2>
-  <ol class="steps"><li>Instala a Facette na App Store — é gratuita para começar.</li><li>Abre a app, toca em &#x27;Resgatar código&#x27; e introduz o presente.</li><li>Aproveita um mês inteiro de Pro: todos os jogos, sem anúncios.</li></ol>
+  <ol class="steps"><li>Abre o link abaixo no iPhone, iPad ou Mac — leva-te diretamente à App Store.</li><li>Toca em Resgatar e confirma com o Face ID ou a palavra-passe da tua conta Apple.</li><li>Pro ativo. Aproveita o primeiro mês grátis — cinco minutos calmos por dia, tudo no teu dispositivo.</li></ol>
 
   <div class="callout"><p>Terminado o mês grátis, a subscrição renova-se automaticamente como Facette Pro ao preço normal, para que a prática não se interrompa. Se preferires parar antes disso, cancelas quando quiseres — em dois toques, nas definições da tua conta Apple. Sem lembretes insistentes, sem culpa.</p></div>
 </main>
+<script>
+/* Selbst-enthaltene, wohlwollende Personalisierung aus dem URL-Fragment (#from/#note). Kein Fetch,
+   kein externes Skript. Fremd-Input wird gekappt/entzeilt und AUSSCHLIESSLICH via textContent gesetzt
+   (nie als Markup) -> keine Injektion. Bei Fehlern still auf die schlichte Variante zurueckfallen. */
+(function () {
+  try {
+    var p = new URLSearchParams((location.hash || "").replace(/^#/, ""));
+    var from = (p.get("from") || "").replace(/[\r\n]+/g, " ").trim().slice(0, 32);
+    var note = (p.get("note") || "").replace(/[\r\n]+/g, " ").trim().slice(0, 140);
+    if (from) {
+      var fl = document.getElementById("giftFrom");
+      fl.textContent = (fl.getAttribute("data-tpl") || "%s").replace("%s", function () { return from; });
+      fl.hidden = false;
+      document.getElementById("giftFor").hidden = false;
+    }
+    if (note) {
+      var nl = document.getElementById("giftNote");
+      nl.textContent = "\u201E" + note + "\u201C";
+      nl.hidden = false;
+    }
+  } catch (e) {}
+})();
+</script>
 <footer><div class="wrap">
   <span>&copy; 2026 Facette &middot; Andreas Putzinger, Austria</span>
   <span><a href="/pt/index.html">Home</a> &middot; <a href="/pt/privacy.html">Privacy</a> &middot; <a href="mailto:press@facette.life">press@facette.life</a></span>

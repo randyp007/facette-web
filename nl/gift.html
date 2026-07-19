@@ -6,6 +6,7 @@
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
 <meta name="googlebot" content="noindex, nofollow">
 <meta name="robots" content="noai, noimageai">
+<meta name="referrer" content="no-referrer">
 <title>Geef het door aan iemand die je mag — Facette</title>
 <meta name="description" content="Geef Facette cadeau: een gratis maand Pro om door te geven. Advertentievrij, zonder tracking, alles op het toestel zelf. Deel de code en wissel hem in.">
 <meta name="apple-itunes-app" content="app-id=6786462068">
@@ -71,16 +72,19 @@ footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
   <a class="back" href="/nl/index.html">← facette.life</a>
 </div></header>
 <main class="read">
+  <p class="eyebrow" id="giftFor" hidden>Voor jou</p>
+  <p class="lead" id="giftFrom" data-tpl="%s heeft je een paar rustige minuten cadeau gedaan." hidden></p>
+  <blockquote id="giftNote" hidden></blockquote>
   <p class="eyebrow">Een cadeautje van Facette</p>
   <h1>Geef het door aan iemand die je mag</h1>
   <p class="lead">Een maand Pro, van ons aan jou — om door te geven aan iemand die wel wat rust kan gebruiken. Advertentievrij, zonder tracking, alles blijft gewoon op hun eigen apparaat. Deel de code en schenk ze vijf rustige minuten per dag.</p>
 
   <div class="codebox">
     <p class="lbl">Cadeaucode</p>
-    <p class="code"><!--CODE-->XXXX-XXXX<!--/CODE--></p>
-    <p class="exp">Geldig tot <!--EXPIRES-->—<!--/EXPIRES--></p>
+    <p class="code"><!--CODE-->1MONTH4FRIENDS<!--/CODE--></p>
+    <p class="exp">Geldig tot <!--EXPIRES-->2026-12-31<!--/EXPIRES--></p>
   </div>
-  <p><a class="cta" href="https://apps.apple.com/redeem?ctx=offercodes&id=6786462068">Inwisselen in de App Store</a></p>
+  <p><a class="cta" rel="noreferrer" href="https://apps.apple.com/redeem?ctx=offercodes&id=6786462068&code=1MONTH4FRIENDS">Inwisselen in de App Store</a></p>
   <p class="small">Draait op het toestel · advertentievrij · zonder account</p>
 
   <h2>Zo verzilver je</h2>
@@ -88,6 +92,29 @@ footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
 
   <div class="callout"><p>Na de gratis maand loopt Pro gewoon door als betaald abonnement, tegen de normale prijs — tenzij je opzegt. Dat kan altijd, in twee tikken via je Apple-account. Geen trucjes, geen kleine lettertjes.</p></div>
 </main>
+<script>
+/* Selbst-enthaltene, wohlwollende Personalisierung aus dem URL-Fragment (#from/#note). Kein Fetch,
+   kein externes Skript. Fremd-Input wird gekappt/entzeilt und AUSSCHLIESSLICH via textContent gesetzt
+   (nie als Markup) -> keine Injektion. Bei Fehlern still auf die schlichte Variante zurueckfallen. */
+(function () {
+  try {
+    var p = new URLSearchParams((location.hash || "").replace(/^#/, ""));
+    var from = (p.get("from") || "").replace(/[\r\n]+/g, " ").trim().slice(0, 32);
+    var note = (p.get("note") || "").replace(/[\r\n]+/g, " ").trim().slice(0, 140);
+    if (from) {
+      var fl = document.getElementById("giftFrom");
+      fl.textContent = (fl.getAttribute("data-tpl") || "%s").replace("%s", function () { return from; });
+      fl.hidden = false;
+      document.getElementById("giftFor").hidden = false;
+    }
+    if (note) {
+      var nl = document.getElementById("giftNote");
+      nl.textContent = "\u201E" + note + "\u201C";
+      nl.hidden = false;
+    }
+  } catch (e) {}
+})();
+</script>
 <footer><div class="wrap">
   <span>&copy; 2026 Facette &middot; Andreas Putzinger, Austria</span>
   <span><a href="/nl/index.html">Home</a> &middot; <a href="/nl/privacy.html">Privacy</a> &middot; <a href="mailto:press@facette.life">press@facette.life</a></span>
