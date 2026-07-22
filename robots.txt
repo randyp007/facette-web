@@ -1,19 +1,24 @@
 # facette.life — allgemeines Crawling erlaubt (gut fuer SEO).
-# Ausnahme: die Geschenk-Seiten (/gift.html) tragen zeitlich begrenzte Offer-Codes und
-# sollen weder von Suchmaschinen noch von LLM-/AI-Crawlern indexiert/gecacht werden.
+# Ausnahme: die Geschenk-Seiten (/gift.html) tragen zeitlich begrenzte Offer-Codes.
+#
+# Warum hier KEIN Disallow fuer die Gift-Seiten mehr steht:
+# Ein Disallow verhindert das CRAWLEN, nicht das Indexieren. Eine gesperrte URL kann
+# weiterhin als reiner URL-Eintrag in den Index geraten — und die Suchmaschine kann das
+# `noindex` im Seitenkopf gar nicht mehr lesen, weil sie die Seite nicht abrufen darf.
+# Das Disallow hat den Schutz also aufgehoben, statt ihn zu geben. Die Gift-Seiten tragen
+# `noindex, nofollow, noarchive, nosnippet` (siehe gen_pages.py) — das wirkt erst, wenn
+# die Seite abrufbar ist. Zusaetzlich war die frueher hier stehende Liste aller acht
+# lokalisierten Gift-URLs die einzige oeffentliche Aufzaehlung dieser Seiten.
 
 # --- Suchmaschinen (alle) ---
+# Kein Disallow — der Schutz kommt aus den noindex-Metas der Gift-Seiten.
 User-agent: *
-Disallow: /gift.html
-Disallow: /en/gift.html
-Disallow: /de/gift.html
-Disallow: /fr/gift.html
-Disallow: /es/gift.html
-Disallow: /it/gift.html
-Disallow: /pt/gift.html
-Disallow: /nl/gift.html
+Disallow:
 
 # --- LLM- / AI-Crawler: Gift-Seiten aus Training & Antworten heraushalten ---
+# Hier bleibt die Sperre: AI-Crawler werten `noindex` nicht zuverlaessig aus, fuer sie ist
+# robots.txt das einzige wirksame Mittel. Als Muster statt als Liste, damit die einzelnen
+# Sprachvarianten nicht mehr aufgezaehlt werden.
 User-agent: GPTBot
 User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
@@ -33,13 +38,6 @@ User-agent: cohere-ai
 User-agent: Diffbot
 User-agent: YouBot
 User-agent: ImagesiftBot
-Disallow: /gift.html
-Disallow: /en/gift.html
-Disallow: /de/gift.html
-Disallow: /fr/gift.html
-Disallow: /es/gift.html
-Disallow: /it/gift.html
-Disallow: /pt/gift.html
-Disallow: /nl/gift.html
+Disallow: /*gift.html
 
 Sitemap: https://facette.life/sitemap.xml
