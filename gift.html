@@ -119,4 +119,47 @@ footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
   <span>&copy; 2026 Facette &middot; Andreas Putzinger, Austria</span>
   <span><a href="/en/index.html">Home</a> &middot; <a href="/en/privacy.html">Privacy</a> &middot; <a href="mailto:press@facette.life">press@facette.life</a></span>
 </div></footer>
+
+<script>
+/* Die Sprachleiste verlor beim Klick das URL-Fragment (#from/#note) — der Beschenkte sah danach
+   die schlichte Seite ohne Namen und Notiz. Jeden Leisten-Link beim Laden um Query+Fragment
+   ergaenzen, statt sie in sieben Dateien von Hand zu pflegen. */
+(function () {
+  try {
+    var rest = (location.search || "") + (location.hash || "");
+    if (!rest) return;
+    var links = document.querySelectorAll("nav.langbar a[href]");
+    for (var i = 0; i < links.length; i++) {
+      var h = links[i].getAttribute("href");
+      if (h && h.indexOf("#") === -1) links[i].setAttribute("href", h + rest);
+    }
+  } catch (e) { /* still: die Leiste funktioniert dann wie bisher */ }
+})();
+</script>
+
+<script>
+/* SPRACHWEICHE — nur auf dieser obersten Seite, nicht in den Sprachfassungen (sonst Schleife).
+   WARUM HIER UND NICHT IN DER APP: Der Beschenkte oeffnet den Link, nicht der Schenkende — seine
+   Browsersprache ist das richtige Signal, nicht die App-Sprache des Absenders. Ausserdem braucht
+   es so kein App-Update und keine Review.
+   Das FRAGMENT (#from/#note) wird ausdruecklich mitgenommen; ein blosses location.href = "/de/..."
+   haette es verworfen und die Personalisierung stillschweigend geloescht.
+   `?lang=` unterdrueckt die Weiche (wer bewusst eine Sprache waehlt, wird nicht zurueckgeworfen).
+   Diese Seite IST die englische Fassung — bei "en" bleibt sie stehen. */
+(function () {
+  try {
+    if (/[?&]lang=/.test(location.search)) return;
+    var da = ["de","es","fr","it","nl","pt"];              /* "en" fehlt bewusst: das ist hier */
+    var wunsch = navigator.languages || [navigator.language || ""];
+    for (var i = 0; i < wunsch.length; i++) {
+      var kurz = String(wunsch[i] || "").toLowerCase().split("-")[0];
+      if (kurz === "en") return;                            /* Englisch gewinnt -> hierbleiben */
+      if (da.indexOf(kurz) !== -1) {
+        location.replace("/" + kurz + "/gift.html" + (location.search || "") + (location.hash || ""));
+        return;
+      }
+    }
+  } catch (e) { /* still: dann bleibt die englische Fassung stehen */ }
+})();
+</script>
 </body></html>

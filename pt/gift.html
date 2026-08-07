@@ -119,4 +119,21 @@ footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
   <span>&copy; 2026 Facette &middot; Andreas Putzinger, Austria</span>
   <span><a href="/pt/index.html">Home</a> &middot; <a href="/pt/privacy.html">Privacy</a> &middot; <a href="mailto:press@facette.life">press@facette.life</a></span>
 </div></footer>
+
+<script>
+/* Die Sprachleiste verlor beim Klick das URL-Fragment (#from/#note) — der Beschenkte sah danach
+   die schlichte Seite ohne Namen und Notiz. Jeden Leisten-Link beim Laden um Query+Fragment
+   ergaenzen, statt sie in sieben Dateien von Hand zu pflegen. */
+(function () {
+  try {
+    var rest = (location.search || "") + (location.hash || "");
+    if (!rest) return;
+    var links = document.querySelectorAll("nav.langbar a[href]");
+    for (var i = 0; i < links.length; i++) {
+      var h = links[i].getAttribute("href");
+      if (h && h.indexOf("#") === -1) links[i].setAttribute("href", h + rest);
+    }
+  } catch (e) { /* still: die Leiste funktioniert dann wie bisher */ }
+})();
+</script>
 </body></html>
